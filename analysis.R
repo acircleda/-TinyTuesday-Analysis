@@ -51,16 +51,6 @@ by_week <- tweets %>%
   summarise(max = max(x)) %>% 
   arrange(desc(max))
 
-
-# Possible Q's:
-#   Who's contributing the most?
-#   What % of contributors contribte repeatedly?
-#   What % of contributors sustain contribution over time?
-#   Does code become more sophisticated?
-#   Do visualizations become "better"?
-#   Which visuals get the most likes each week, and why?
-#   
-  
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
 #########################################
