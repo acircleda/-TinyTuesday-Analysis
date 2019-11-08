@@ -65,6 +65,7 @@ write_rds(pre_expanded, "/processed-data/processed_data_with_processed_urls.rds"
 #########################################
 
 # check out the media url field - I think it works when passed to the function below:
+# this will have to be iterated in some way (e.g., with purrr::map())
 download.file()
 
 
