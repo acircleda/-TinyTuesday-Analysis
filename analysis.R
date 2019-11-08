@@ -63,3 +63,8 @@ write_rds(pre_expanded, "/processed-data/processed_data_with_processed_urls.rds"
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
 #########################################
+
+# check out the media url field - I think it works when passed to the function below:
+download.file()
+
+
