@@ -62,10 +62,18 @@ write_rds(pre_expanded, "/processed-data/processed_data_with_processed_urls.rds"
 
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
-#########################################
+tweets <- tweets %>% separate(ext_media_url, into = c("url1", "url2"), sep = " ") %>% mutate(
+  url1_name = paste0(screen_name, " - ", week, " - ", basename(url1)),
+  url2_name = paste0(screen_name, " - ", week, " - ", basename(url2))
+)
 
-# check out the media url field - I think it works when passed to the function below:
-# this will have to be iterated in some way (e.g., with purrr::map())
-download.file()
+#url1
+for (i in 1:length(tweets$url1)){
+  download.file(tweets$url1[i], destfile =  tweets$url1_name[i], mode = 'wb')
+}
 
+#url2
+for (i in 1:length(tweets$url2)){
+  download.file(tweets$url2[i], destfile =  tweets$url2_name[i], mode = 'wb')
+}
 
