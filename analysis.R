@@ -6,7 +6,7 @@ library(ggplot2)
 
 pre <- read_rds("processed-tweets.rds")
 
-flat <- flatten(pre)
+# flat <- flatten(pre)
 
 #get number of tweets by username over 2 tweets
 user_tweet_counts <- flat %>% 
