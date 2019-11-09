@@ -3,12 +3,12 @@
 library(tidyverse)
 library(lubridate)
 library(ggplot2)
+library(urltools)
+library(longurl)
 
 pre <- read_rds("processed-data/processed-data.rds")
 
 pre <- pre %>% unnest(urls_expanded_url)
-
-shorteners <- c("bit.ly", "ow.ly", "buff.ly", "goo.gl", "ln.is", "tinyurl.com", "share.es", "ht.ly", "fb.me", "wp.me", "ift.tt")
 
 # flat <- flatten(pre)
 
@@ -20,7 +20,7 @@ user_tweet_counts <- pre %>%
   subset(n > 2)
 
 #subset of data
-tweets <- flat %>% select(
+tweets <- pre %>% select(
   screen_name, created_at, text, urls_expanded_url, ext_media_url, favorite_count, retweet_count, is_retweet
 ) %>%
   mutate(
@@ -29,10 +29,11 @@ tweets <- flat %>% select(
   ) %>% filter(
     !is_retweet, #not a retweet
     screen_name %in% user_tweet_counts$screen_name, #tweets > 2
+    # the warning is because this seems to be a list-column; but, this still seems to work
     str_detect(ext_media_url, 'http') #a tweet with media is likely a contribution
   ) %>%
-  subset(screen_name != "thomas_mock" | screen_name != "R4DScommunity" | screen_name != "tidypod") #this line not working - exclude these as they are the same person
-
+  # can the following line be a filter?
+  filter(screen_name != "thomas_mock" | screen_name != "R4DScommunity" | screen_name != "tidypod") #this line not working - exclude these as they are the same person
 
 #count how many weeks contributed per user (over 2 contributions MIN).
 by_week <- tweets %>% 
@@ -46,19 +47,30 @@ by_week <- tweets %>%
 
 # process URLs
 
+shorteners <- c("bit.ly", "ow.ly", "buff.ly", "goo.gl", "ln.is", "tinyurl.com", "share.es", "ht.ly", "fb.me", "wp.me", "ift.tt")
+
 pre <- pre %>% 
-  mutate(domains = urltools::domain(d$urls_expanded_url),
+  mutate(domains = urltools::domain(urls_expanded_url),
          need_to_expand = domains %in% shorteners)
 
+# this takes about 5 minutes to run
+expanded_urls <- pre %>% 
+  filter(need_to_expand) %>% 
+  pull(urls_expanded_url) %>% 
+  unique() %>% 
+  expand_urls()
+
 pre_expanded <- pre %>% 
-  mutate(processed_url = ifelse(need_to_expand == 1, expand_urls(urls_expanded_url), urls_expanded_url))
-
-pre_expanded <- pre_expanded %>% 
-  mutate(domain = domain(urls_expanded_url),
+  mutate(index = 1:nrow(.)) %>% 
+  rename(orig_url = urls_expanded_url) %>% 
+  left_join(expanded_urls) %>% 
+  mutate(processed_url = ifelse(need_to_expand == 1, expanded_url, orig_url),
+         domain = domain(processed_url),
          is_github_link = str_detect(domain, "github.com") & !str_detect(domain, "gist"),
-         is_gist_link = str_detect(domain, "gist.github.com"))
+         is_gist_link = str_detect(domain, "gist.github.com")) %>% 
+  select(status_id, status_url, screen_name, created_at, processed_url)
 
-write_rds(pre_expanded, "/processed-data/processed_data_with_processed_urls.rds")
+write_csv(pre_expanded, "processed-data/processed_urls.csv")
 
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
