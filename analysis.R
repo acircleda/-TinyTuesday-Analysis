@@ -21,7 +21,7 @@ user_tweet_counts <- pre %>%
 
 #subset of data
 tweets <- pre %>% select(
-  screen_name, created_at, text, urls_expanded_url, ext_media_url, favorite_count, retweet_count, is_retweet
+  screen_name, status_url, created_at, text, urls_expanded_url, ext_media_url, favorite_count, retweet_count, is_retweet
 ) %>%
   mutate(
     date = as_date(created_at),
@@ -68,16 +68,18 @@ pre_expanded <- pre %>%
          domain = domain(processed_url),
          is_github_link = str_detect(domain, "github.com") & !str_detect(domain, "gist"),
          is_gist_link = str_detect(domain, "gist.github.com")) %>% 
-  select(status_id, status_url, screen_name, created_at, processed_url)
+  select(status_id, status_url, screen_name, created_at, processed_url, is_github_link, is_gist_link)
 
 write_csv(pre_expanded, "processed-data/processed_urls.csv")
 
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
-tweets <- tweets %>% separate(ext_media_url, into = c("url1", "url2"), sep = " ") %>% mutate(
-  url1_name = paste0(screen_name, " - ", week, " - ", basename(url1)),
-  url2_name = paste0(screen_name, " - ", week, " - ", basename(url2))
-)
+tweets <- tweets %>% 
+  separate(ext_media_url, into = c("url1", "url2"), sep = " ") %>% 
+  mutate(
+    url1_name = paste0(screen_name, " - ", week, " - ", basename(url1)),
+    url2_name = paste0(screen_name, " - ", week, " - ", basename(url2))
+  )
 
 #url1
 for (i in 1:length(tweets$url1)){
