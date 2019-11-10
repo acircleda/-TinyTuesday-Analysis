@@ -3,47 +3,17 @@
 library(tidyverse)
 library(lubridate)
 library(ggplot2)
+library(rtweet)
 library(urltools)
 library(longurl)
+library(splitstackshape)
+library(stringr)
+library(gghighlight)
 
-pre <- read_rds("processed-data/processed-data.rds")
 
-pre <- pre %>% unnest(urls_expanded_url)
+data <- read_rds("processed-data/processed-data.rds")
 
-# flat <- flatten(pre)
-
-#get number of tweets by username over 2 tweets
-user_tweet_counts <- pre %>% 
-  filter(!is_retweet) %>% 
-  count(screen_name) %>% 
-  arrange(desc(n)) %>%
-  subset(n > 2)
-
-#subset of data
-tweets <- pre %>% select(
-  screen_name, created_at, text, urls_expanded_url, ext_media_url, favorite_count, retweet_count, is_retweet
-) %>%
-  mutate(
-    date = as_date(created_at),
-    week(date)
-  ) %>% filter(
-    !is_retweet, #not a retweet
-    screen_name %in% user_tweet_counts$screen_name, #tweets > 2
-    # the warning is because this seems to be a list-column; but, this still seems to work
-    str_detect(ext_media_url, 'http') #a tweet with media is likely a contribution
-  ) %>%
-  # can the following line be a filter?
-  filter(screen_name != "thomas_mock" | screen_name != "R4DScommunity" | screen_name != "tidypod") #this line not working - exclude these as they are the same person
-
-#count how many weeks contributed per user (over 2 contributions MIN).
-by_week <- tweets %>% 
-  group_by(screen_name, `week(date)`) %>% 
-  count(`week(date)`) %>% 
-  ungroup() %>% 
-  group_by(screen_name) %>% 
-  mutate(x = row_number()) %>% 
-  summarise(max = max(x)) %>% 
-  arrange(desc(max))
+pre <- data %>% unnest(urls_expanded_url)
 
 # process URLs
 
@@ -72,20 +42,78 @@ pre_expanded <- pre %>%
 
 write_csv(pre_expanded, "processed-data/processed_urls.csv")
 
-#dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
+# process data for descriptives
 
-tweets <- tweets %>% separate(ext_media_url, into = c("url1", "url2"), sep = " ") %>% mutate(
-  url1_name = paste0(screen_name, " - ", week, " - ", basename(url1)),
-  url2_name = paste0(screen_name, " - ", week, " - ", basename(url2))
-)
+tweets <- flatten(data)
 
-#url1
-for (i in 1:length(tweets$url1)){
-  download.file(tweets$url1[i], destfile =  tweets$url1_name[i], mode = 'wb')
+tweets <- data %>% mutate(
+  ext_media_url_copy = ext_media_url) %>% #cSplit removes this column, but I need it later to subset correctly
+  cSplit("ext_media_url", sep=" ") #using unnest adds ~3000 more rows, which may throw off row counts later
+
+#get number of tweets by username over 2 tweets
+user_tweet_counts <- tweets %>% 
+  filter(!is_retweet) %>% 
+  count(screen_name) %>% 
+  arrange(desc(n)) %>%
+  subset(n > 2) %>%
+  filter(screen_name != "thomas_mock", 
+         screen_name != "R4DScommunity",
+         screen_name != "tidypod")
+
+#subset of data
+subset_tweets <- tweets %>% select(
+  screen_name, created_at, text, favorite_count, retweet_count, is_retweet, ext_media_url_copy, ext_media_url_1, ext_media_url_2, ext_media_url_3, ext_media_url_4) %>%
+  mutate(
+    date = as_date(created_at),
+    week = week(date),
+    ext_media_url_1 = str_remove_all(ext_media_url_1, 'c\\("|",'),
+    ext_media_url_2 = str_remove_all(ext_media_url_2, '"|"\\)|,"'),
+    ext_media_url_3 = str_remove_all(ext_media_url_3, '"|"\\)|,"'),
+    ext_media_url_4 = str_remove_all(ext_media_url_4, '"|"\\)|,"')
+        ) %>% 
+  filter(
+    !is_retweet, #not a retweet
+    screen_name %in% user_tweet_counts$screen_name,
+    str_detect(ext_media_url_copy, 'http'))
+
+
+#count how many weeks contributed per user (over 2 contributions MIN).
+by_week <- subset_tweets %>% 
+  group_by(screen_name, week) %>% 
+  count(week) %>% 
+  ungroup() %>% 
+  group_by(screen_name) %>% 
+  mutate(x = row_number()) %>% 
+  summarise(total_weeks = max(x)) %>% 
+  arrange(desc(total_weeks))
+
+
+summary(user_tweet_counts) # tweets: mean 8.79 median 5
+summary(by_week) #participation weeks: mean 6.278 median 4
+
+weekly_contribution <- subset_tweets %>% group_by(week) %>% count(screen_name) %>% left_join(by_week, by ="screen_name")
+
+#line graph with top 5 contrbutors highlighted
+ggplot(weekly_contribution) +
+  geom_line(aes(x=week, y=n, group=screen_name, color=screen_name))+
+  gghighlight(max(total_weeks), max_highlight = 5, unhighlighted_colour = "grey80")
+
+#line graph with top 10 contrbutors highlighted
+ggplot(weekly_contribution) +
+  geom_line(aes(x=week, y=n, group=screen_name, color=screen_name))+
+  gghighlight(max(max), max_highlight = 10, unhighlighted_colour = "grey80")
+
+# weekly_contribution_mean <- weekly_contribution %>% group_by(screen_name) %>% summarize(mean_weekly_contibution = mean(n))
+# summary(weekly_contribution_mean)
+
+
+#dowload images organized by username, week-number as prefix, for anyone over n contributions
+
+tweets_pivot <- subset_tweets %>% group_by(screen_name) %>% pivot_longer(ext_media_url_1:ext_media_url_4, names_to = "media_num", values_to = "url") %>% mutate(
+  filename=paste0(screen_name, "-", week, "-", basename(url))
+  ) %>% drop_na(url)
+
+
+for (i in 1:length(tweets_pivot$url)){
+  download.file(tweets_pivot$url[i], destfile =  tweets_pivot$filename[i], mode = 'wb')
 }
-
-#url2
-for (i in 1:length(tweets$url2)){
-  download.file(tweets$url2[i], destfile =  tweets$url2_name[i], mode = 'wb')
-}
-
