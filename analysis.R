@@ -87,6 +87,23 @@ by_week <- subset_tweets %>%
   arrange(desc(total_weeks))
 
 
+n_distinct(data$user_id) #1,231 unique contributors
+n_distinct(data$status_id) #4,418 unique tweets
+n_distinct(subset_tweets$ext_media_url_copy) #2,224 possible contributions
+
+#contributed in the first 4 weeks
+month_first <- subset_tweets %>% filter(week < 5) %>% select(screen_name) %>% group_by(screen_name) %>% count(screen_name)
+
+#contributed in the middle 5 weeks
+month_mid <- subset_tweets %>% filter(week > 23 | week < 29 ) %>% select(screen_name) %>% group_by(screen_name) %>% count(screen_name)
+
+#contributed in the last 4 weeks
+month_last<- subset_tweets %>% filter(week > 48) %>% select(screen_name)  %>% group_by(screen_name) %>% count(screen_name)
+
+contributors_first_last <- month_first %>% inner_join(month_last, by = "screen_name")
+
+contributors_first_mid_last <- contributors_first_last %>% inner_join(month_mid, by = "screen_name")
+
 summary(user_tweet_counts) # tweets: mean 8.79 median 5
 summary(by_week) #participation weeks: mean 6.278 median 4
 
