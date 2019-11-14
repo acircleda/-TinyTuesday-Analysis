@@ -75,11 +75,8 @@ write_csv(pre_expanded, "processed-data/processed_urls.csv")
 #dowload images organized into folders by username, week-number as prefix, for anyone over n contributions
 
 tweets <- tweets %>% 
-  separate(ext_media_url, into = c("url1", "url2"), sep = " ") %>% 
-  mutate(
-    url1_name = paste0(screen_name, " - ", week, " - ", basename(url1)),
-    url2_name = paste0(screen_name, " - ", week, " - ", basename(url2))
-  )
+  unnest(ext_media_url) %>% 
+  mutate(url_name = paste0(screen_name, " - ", `week(date)`, " - ", ext_media_url))
 
 #url1
 for (i in 1:length(tweets$url1)){

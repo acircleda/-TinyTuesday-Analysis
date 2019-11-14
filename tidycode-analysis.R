@@ -37,4 +37,7 @@ lll <- ll %>%
 
 lll %>% 
   inner_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
-  select(func, classification)
+  select(func, classification) %>% 
+  count(classification) %>% 
+  arrange(desc(n)) %>% 
+  mutate(prop = n / sum(n))
