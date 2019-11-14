@@ -29,15 +29,18 @@ library(tidyverse)
 #   unnest_calls(expr)
 # 
 # write_rds(ll, "processed-data/processed-tidycode-data.rds")
+#
+# lll <- ll %>% 
+#   anti_join(get_stopfuncs())
+# 
+# lll %>% 
+#   inner_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
+#   select(func, classification) %>% 
+#   count(classification) %>% 
+#   arrange(desc(n)) %>% 
+#   mutate(prop = n / sum(n))
 
-ll <- read_rds("processed-data/processed-tidycode-data.rds")
+tidycode_output <- read_rds("processed-data/processed-tidycode-data.rds")
 
-lll <- ll %>% 
-  anti_join(get_stopfuncs())
+tweet_data <- read_csv("processed-data/processed_urls.csv")
 
-lll %>% 
-  inner_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
-  select(func, classification) %>% 
-  count(classification) %>% 
-  arrange(desc(n)) %>% 
-  mutate(prop = n / sum(n))
