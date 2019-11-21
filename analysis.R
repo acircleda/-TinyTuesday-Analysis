@@ -119,9 +119,6 @@ ggplot(weekly_contribution) +
   geom_line(aes(x=week, y=n, group=screen_name, color=screen_name))+
   gghighlight(max(max), max_highlight = 10, unhighlighted_colour = "grey80")
 
-# weekly_contribution_mean <- weekly_contribution %>% group_by(screen_name) %>% summarize(mean_weekly_contibution = mean(n))
-# summary(weekly_contribution_mean)
-
 
 #dowload images organized by username, week-number as prefix, for anyone over n contributions
 
@@ -133,3 +130,44 @@ tweets_pivot <- subset_tweets %>% group_by(screen_name) %>% pivot_longer(ext_med
 for (i in 1:length(tweets_pivot$url)){
   download.file(tweets_pivot$url[i], destfile =  tweets_pivot$filename[i], mode = 'wb')
 }
+
+#likes and retweets
+subset_tweets <- subset_tweets %>% mutate(
+  pop = retweet_count + favorite_count)
+
+#who has the most popular tweets
+likes <- subset_tweets %>% group_by(screen_name) %>% summarize(likes = sum(pop)) %>%
+  arrange(desc(likes))
+
+#top 25 contributors with the most likes
+top_25 <- likes %>% top_n(25)
+
+#top 17 contributors who are top likes
+contributors_first_mid_last %>% inner_join(likes, by = "screen_name")
+
+#which prolific #TT contributors have the most likes?
+contributors_first_mid_last %>% inner_join(top_25, by ="screen_name") %>% arrange(desc(likes)) %>% view()
+
+#which tweets are the most popular
+likes %>% arrange(desc(likes)) %>% view()
+
+ggplot(subset_tweets) +
+  geom_line(aes(x=week, y=pop))
+
+#do likes follow retweets?
+ggplot(subset_tweets) +
+  geom_line(aes(x=week, y=favorite_count), color="blue")+
+  geom_line(aes(x=week, y=retweet_count), color="red")
+
+#likes seem to be more common than retweets
+
+
+#are likes and retweets correlated?
+cor(subset_tweets$retweet_count, subset_tweets$favorite_count, method = c("pearson"))
+#.95 strong correlation
+
+
+
+#random sample for content analysis
+sample <- sample_n(subset_tweets, 50)
+write.csv(sample, "50 random tweets.csv")
