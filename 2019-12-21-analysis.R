@@ -12,7 +12,7 @@ nu <- td %>%
   filter(!is_retweet) %>% 
   count(screen_name) %>% 
   arrange(desc(n)) %>% 
-  filter(n > 10)
+  filter(n > 1) # change back to 10
 
 tds <- td %>% 
   semi_join(nu)
@@ -65,10 +65,6 @@ small_out_p <- small_out %>%
 
 # Merging
 
-small_out_p %>% 
-  ungroup() %>%
-  summarize_if(is.numeric, mean)
-
 sum_tab <- tds %>% 
   left_join(small_out_p) %>% 
   filter(!is.na(communication)) %>% 
@@ -76,8 +72,51 @@ sum_tab <- tds %>%
   arrange(created_at) %>% 
   mutate(tweet_num = row_number()) %>% 
   ungroup() %>% 
-  select(screen_name, status_url, favorite_count, retweet_count, reply_count, tweet_num, total_n_funcs, communication:visualization) %>% 
+  select(screen_name, status_url, created_at, favorite_count, retweet_count, tweet_num, total_n_funcs, communication:visualization) %>% 
+  mutate(recognitions = favorite_count + retweet_count) %>% 
+  select(-favorite_count, -retweet_count) %>% 
   mutate_if(is.numeric, replace_na, 0) %>% 
-  arrange(screen_name, tweet_num)
+  arrange(screen_name, tweet_num) %>% 
+  select(tweet_num, total_n_funcs, recognitions, everything())
+
+small_out_p %>% 
+  ungroup() %>%
+  summarize_if(is.numeric, mean)
+
+sum_tab %>% 
+  select_if(is.numeric) %>% 
+  as.matrix() %>% 
+  Hmisc::rcorr()
 
 write_csv(sum_tab, "summary-table-top-10-tweeters.csv")
+
+to_keep <- sum_tab %>% 
+  count(screen_name) %>% 
+  arrange(desc(n)) %>% 
+  filter(!(screen_name %in% c("jakekaupp", "geomaramanis", "thomas_mock"))) %>% 
+  filter(n > 10)
+
+sum_tab %>% 
+  semi_join(to_keep) %>% 
+  ggplot(aes(x = created_at, y = total_n_funcs)) +
+  geom_point() +
+  facet_wrap(~screen_name)
+
+sum_tab %>% 
+  semi_join(to_keep) %>% 
+  mutate(tweet_num_s = scale(tweet_num)) %>% 
+  group_split(screen_name) %>% 
+  map(select_if, is.numeric) %>% 
+  map(corrr::correlate)
+
+# allison_horst:
+# -
+
+# geokaramanis
+# - 
+
+# kigtembu
+# - more communication, exporting, and importing over time, less clecaning, less exploring
+
+# othomn
+# - 

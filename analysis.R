@@ -17,7 +17,9 @@ user_tweet_counts <- pre %>%
   filter(!is_retweet) %>% 
   count(screen_name) %>% 
   arrange(desc(n)) %>%
-  subset(n > 2)
+  subset(n > 10)
+
+user_tweet_counts
 
 #subset of data
 tweets <- pre %>% select(
