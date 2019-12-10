@@ -68,8 +68,7 @@ subset_tweets <- tweets %>% select(
     ext_media_url_1 = str_remove_all(ext_media_url_1, 'c\\("|",'),
     ext_media_url_2 = str_remove_all(ext_media_url_2, '"|"\\)|,"'),
     ext_media_url_3 = str_remove_all(ext_media_url_3, '"|"\\)|,"'),
-    ext_media_url_4 = str_remove_all(ext_media_url_4, '"|"\\)|,"')
-  ) %>% 
+    ext_media_url_4 = str_remove_all(ext_media_url_4, '"|"\\)|,"')) %>% 
   filter(
     !is_retweet, #not a retweet
     screen_name %in% user_tweet_counts$screen_name,
@@ -123,9 +122,7 @@ ggplot(weekly_contribution) +
 #dowload images organized by username, week-number as prefix, for anyone over n contributions
 
 tweets_pivot <- subset_tweets %>% group_by(screen_name) %>% pivot_longer(ext_media_url_1:ext_media_url_4, names_to = "media_num", values_to = "url") %>% mutate(
-  filename=paste0(screen_name, "-", week, "-", basename(url))
-) %>% drop_na(url)
-
+  filename=paste0(screen_name, "-", week, "-", basename(url)) %>% drop_na(url)
 
 for (i in 1:length(tweets_pivot$url)){
   download.file(tweets_pivot$url[i], destfile =  tweets_pivot$filename[i], mode = 'wb')
