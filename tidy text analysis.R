@@ -72,3 +72,4 @@ nrc <- get_sentiments("nrc")
 tidy_tweets %>% inner_join(nrc, by = "word")
 
 tidy_tweets %>% 
+  sentistrength
