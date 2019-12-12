@@ -217,6 +217,12 @@ n_of_functions_overall <- tds %>% left_join(small_out_n) %>%
   geom_smooth(method='lm', aes(x=week, y=function_count))+
     facet_wrap(~function_type)
   
+#number of total functions overall
+n_of_functions_overall %>% group_by(week) %>% 
+  summarize(sum = sum(function_count)) %>%
+  ggplot()+
+  geom_line(aes(x=week, y=sum))
+  
 
 
 #per user total functions/week - not disaggregated by function type
@@ -259,3 +265,64 @@ fit <- lmer(function_count ~ function_type * week + (1|function_type), data=n_of
 anova(fit)
 
 get_contrasts(fit, "function_type") #can't get contrasts by week?
+
+##How does proporition of code change over time? (overall by function)
+prop_overall <- n_of_functions_overall %>% group_by(week) %>% mutate(
+  prop = prop.table(function_count))
+
+ggplot(prop_overall)+
+  geom_point(aes(x=week, y=prop, color=function_type))+
+  geom_smooth(method='lm', aes(x=week, y=prop))+
+  facet_wrap(~function_type)
+
+ggplot(prop_overall)+
+  coord_flip()+
+  geom_bar(aes(x=week, y=prop, fill=function_type), stat="identity", position="fill")+
+  scale_x_reverse()
+
+#########using sum_tab
+
+ggplot(sum_tab)+
+  geom_bar(aes(x=tweet_num, y=mean(total_n_funcs)), stat="identity")
+
+##proportion of code analysis by tweet number not week number
+#stacked 100% bar
+sum_tab %>% pivot_longer(communication:visualization, names_to="function_type", values_to = "function_count") %>% group_by(tweet_num, function_type) %>%
+  summarize(mean = mean(function_count)) %>%
+  mutate(prop = prop.table(mean)) %>%
+  ggplot()+
+  geom_bar(aes(x=tweet_num, y=prop, fill=function_type), stat="identity", position="fill")
+
+#faceted line chart
+sum_tab %>% pivot_longer(communication:visualization, names_to="function_type", values_to = "function_count") %>% group_by(screen_name, tweet_num, function_type) %>%
+  summarize(mean = mean(function_count)) %>%
+  mutate(prop = prop.table(mean)) %>%
+  ggplot()+
+  geom_line(aes(x=tweet_num, y=prop, color=function_type))+
+  facet_wrap(~function_type)+
+  geom_smooth(method='lm', aes(x=tweet_num, y=prop))
+
+
+##proportions of code for first five and last five tweets
+sum_tab %>% pivot_longer(communication:visualization, names_to="function_type", values_to = "function_count") %>% group_by(tweet_num, function_type) %>%
+  summarize(sum = mean(function_count)) %>%
+  mutate(prop = prop.table(sum)) %>%
+  select(tweet_num, function_type, prop) %>%
+  pivot_wider(names_from = tweet_num, values_from = prop) %>%
+  rowwise() %>%
+  mutate(firstfive = mean(c(`1`,`2`,`3`,`4`,`5`)),
+         lastfive = mean(c(`31`,`32`,`33`,`34`,`35`))
+         ) %>% select(function_type, firstfive, lastfive) %>%
+  pivot_longer(firstfive:lastfive) %>% ggplot()+
+  geom_bar(aes(x=name, y=value, fill=function_type), stat="identity")
+
+#first five and last five by mean functions overall count
+sum_tab %>% pivot_longer(communication:visualization, names_to="function_type", values_to = "function_count") %>% group_by(tweet_num) %>%
+  summarize(sum = mean(total_n_funcs)) %>% 
+  pivot_wider(names_from = tweet_num, values_from = sum) %>% rowwise() %>%
+  mutate(firstfive = mean(c(`1`,`2`,`3`,`4`,`5`)),
+         lastfive = mean(c(`31`,`32`,`33`,`34`,`35`))
+  ) %>% select(firstfive, lastfive) %>%
+  pivot_longer(firstfive:lastfive) %>% ggplot()+
+  geom_bar(aes(x=name, y=value), stat="identity")
+
