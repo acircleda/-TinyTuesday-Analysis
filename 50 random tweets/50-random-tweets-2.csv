@@ -1,0 +1,95 @@
+"","Sample","text"
+"1",2,"#TidyTuesday #2: First use of the violin plot. Overlaid with a jitter of the individual polls. Ok, I guess I should focus on grading exams now :)
+
+Code: https://t.co/tI4kKuMcTs https://t.co/F6o23QrRrA"
+"2",2,"I am very late for this last #TidyTuesday but here is my take on the video games dataset. Code can be found at: https://t.co/Kel7oUy4Xw https://t.co/oOX5OwqS3E"
+"3",2,"Lights! Camera! #TidyTuesday! (Noisy) Graph of annual mean global profit by genre and a cleaner trend for total profit by decade. https://t.co/eXT1Gkm2Rx"
+"4",2,"Adding #testthat tests to your #rstats package helps with proper regression testing. But @_lionelhenry’s #vdiffr package extends this functionality even further, allowing you to test for regressions in visuals such as #ggplot2 plots! #rstats #tidytuesday https://t.co/bfPLbGcWBm"
+"5",2,"I was also tinkering around with a streamgraph-style visualization of the median time to completion data.  Not entirely satisfied with it, but wanted to share how the experiment turned out! #TidyTuesday #rstats #r4ds #epibookclub https://t.co/cAP5nsuzDg"
+"6",2,"#TidyTuesday #rstats #dataviz For the EU_balance dataset, I tried to figure out the growth relationship in current values between 2009-2015 by country, looks like Spain, Italy, Greece, Portugal and Ireland are out of the trend.
+
+code: https://t.co/6Xa9AaHEq0 https://t.co/6dpyUxY9eu"
+"7",2,"Historical results for all 24 teams in the recent Women's Soccer World Cup.  The charts highlight consistent U.S. performances and Netherlands' rapid rise to soccer prominence.  #TidyTuesday #rstats #dataviz  Code: https://t.co/KeYTEOidjo https://t.co/jPS7j73vuY"
+"8",2,"For #TidyTuesday this week I played around with the #tidytext package for the first time! I used the nrc emotion lexicon to find the top emotion in each synopsis then counted the number of anime each emotion was the highest in. https://t.co/SyW6c0jbXI"
+"9",2,"Bit tardy for this weeks #tidytuesday! Apart from plotting, I learnt the names of each country's flag carrier <U+0001F62C>I quickly divided the airlines by continent and alliance partnerships (because I can!). Travelling is safe these days, no matter which continent/alliance you choose! <U+0001F62C> https://t.co/axLdzRoKte"
+"10",2,"A quick comparison plot of % share of revenue by category over the decades, for the ""Media Franchises"" dataset #TidyTuesday #rstats (code: https://t.co/3Xg2v36Cmf) https://t.co/Fy9DBhYxSb"
+"11",2,"My second #TidyTuesday submission - I am now on a streak :) 
+I took the obvious road and plotted the data on map, where I looked at the KGs of mismanged plastic waste per capity per day in each country. #rstats https://t.co/FmWQj4oMZe"
+"12",2,"Third day of learning R and first time trying out #TidyTuesday, but surprisingly I actually have something to show for 5 hours of nonstop ggplot disasters! Used tf-idf first time + @whipson3's amazing lessons. Felt extremely inexperienced, though definitely first of many TT's <U+0001F604> https://t.co/zsRUytT2lf"
+"13",2,"First contribution to #tidytuesday #rstats https://t.co/s99Fl2bBvo"
+"14",2,"For this week quick take on #TidyTuesday I tried to reproduce the look of the original plot in the article https://t.co/Ad2HStjkC3 Not that bad, I guess! #rstats #dataviz #r4ds #tidyverse https://t.co/rzefEhuoqj"
+"15",2,"I thought I would do something quick before the Spurs V United Match and came up with this comparison between team rush distance and pass distance. #tidytuesday #ggplot #rstats https://t.co/ia2TtMr81f"
+"16",2,"Third and last submission for #NobelPrize #TidyTuesday. Looked at shared prizes across the 6 categories, really like the result . Inspired by @spren9er's plot ""Still a man's world"" https://t.co/57n1z1vWE9, and got big help from his code <U+0001F64F><U+0001F64F><U+0001F64F>
+
+code: https://t.co/RP1qWVUNKM https://t.co/xK4F2T5E0e"
+"17",2,"Pretty late #TidyTuesday, but was so inspired by @DataCamp's cluster analysis course! Here is my cluster analysis of Cheese consumption per person. Optimal k = 2 by hierarchical clustering (visual), k-means (elbow), and PAM (silhouette). #rstats 
+
+Code: https://t.co/oe2fTQddLO https://t.co/5UNbCbKIeA"
+"18",2,"This week: 2018-12-25 #TidyTuesday #rstats  ""free week"" ; I choose some open data set from argentina: https://t.co/dIjQVb31C6 ( wild fires ) some animation to start, see thread for more <U+0001F601> Happy new year <U+0001F973> https://t.co/PHQL0zQrLX"
+"19",2,"Evolution of a map for #TidyTuesday #rstats code here: https://t.co/14o2gaZdzv https://t.co/lS7YNTF6uV"
+"20",2,"My first time joining for #TidyTuesday. More urban light in Chicago leads to more bird collisions, but only for birds that call during flight. Find out more in the original paper. #dataviz #rstats #ggplot2 https://t.co/VUhrPIKIDF https://t.co/vYsvclo2kB"
+"21",2,"My first #tidytuesday submission! First time messing around with sankey diagrams in R, unfortunately I wasn't able to save it as a higher quality image! Looking forward to next week! @R4DScommunity https://t.co/zxYm9JrK4b"
+"22",2,"My #TidyTuesday submission for the week 4's Australian incomes by gender dataset. A simple bar chart of the mean of the average taxable income variable broken down by the two gender descriptions acknowledged/allowed by this dataset. https://t.co/nz14HLLBXv"
+"23",2,"1/2 For  #tidytuesday week 29, I was interested in unemployment percentages by major category. I instinctively made a bar chart of averages, but then built a more accurate representation of the data using boxplots. When fct_reorder()ing the categories by unemployment, I wonder .. https://t.co/tYepHWqJfg"
+"24",2,"My first contribution to #TidyTuesday (week 8) and I loved it!  
+Conclusions: Price per pound of honey has more than doubled in 14 years, and the largest growth in production value is seen in North Dakota. #rstats https://t.co/mpD8U26um6"
+"25",2,"States where people walk to work tend to be those where more adults meet guidelines for exercise (and the South isn't looking so good on either). I combined this week's #TidyTuesday dataset with ACS data from week 6 to make this plot. https://t.co/RCAwm1ThoS"
+"26",2,"#TidyTuesday Didn’t have a lot of time but wanted to catch up on last weeks’ Bob Ross data set.  Only 2 episodes featuring Aurora Borealis - also featured in the Steamed Hams scene of The Simpsons https://t.co/FQTtXN9NOe"
+"27",2,"Quick #TidyTuesday looking at co-occuring words in ramen noodle flavors. First time doing text analysis, but @juliasilge and @drob provided a great guide in ""Text Mining with R"". #rstats #r4ds https://t.co/fu6LUVlgHP"
+"28",2,"Slowly but surely, I will build out all #TidyTuesday datasets into visuals and simple dashboards! 
+
+For week 3, I calculated the slope of the percent change over time for each country/statistic combo! It's some fun dplyr shenanigans.
+
+Dashboard &amp; code: https://t.co/wVkJdhLvKR https://t.co/bAFu4exzRy"
+"29",2,"#TidyTuesday, week 16. My contribution to the make over of the Economist.
+For BREXIT, aggregated the data by month, and plotted the difference in means.
+For Brazil pensions, changed title, decreased labels, and used a line to show the average.
+#r4ds #dataviz #rstats https://t.co/njxnFPP0AC"
+"30",2,"Total franchise revenues for largest animated film franchises.  Merchandising seems to generate the most revenues of all media types.  Waffle chart created using @hrbrmstr's R waffle package.  #TidyTuesday #rstats  Code: https://t.co/TfuRAbsolg https://t.co/bKiJXvLep9"
+"31",2,"Another great time at #TidyTuesday. I decided to focus on martian meteorites for most of my work today, Also I had to throw in a conspiracy related plot, because of space and everything #rstats #NASA #r4ds https://t.co/Wn86vRBl7E"
+"32",2,"This week for #TidyTuesday, I took a look at how cleanliness scales in NYC chain restaurants, using inspection data from 2015-2016. Gonna eat below the regression line from now on....
+<U+FFFC>
+ 
+Blog post with code: https://t.co/NNPUlgzCr3 https://t.co/5RwSq7VGY4"
+"33",2,"#TidyTuesday Playing for the first time with gganimate to visualize meteorite collisions since the 1900s ;)
+
+code: https://t.co/gcEoQiQ4SB
+
+#rstats https://t.co/ttBCOsfuJ3"
+"34",2,"#tidytuesday For this week I analyzed: How did the Roman emperors die? what were the Cause of death?
+The code <U+0001F449> https://t.co/ZEJnGsEvjF
+#emperors #Roman #r4ds #r #rstats #data #r #ggplot #rstats #dataviz #rstudio #kaggle #visualization https://t.co/18NEjYn8gF"
+"35",2,"#Elecciones2019 Una mirada  al desarrollo territorial de un gran triunfo del  #MisionerismoPuro #MisionesVota   #rstats #TidyTuesday #MisionesElige 
+*Faltaria ubicar en algun lugar a #Cambiemos 
+-Datos provisorios- https://t.co/U8FYIJw94K"
+"36",2,"#TidyTuesday 
+Most emperor gain power by birthright and dead by assassination (mostly by their own army) and natural cause. They died at various ages, but mostly in their 40-60s. Pic 3 and 4 show the same data, but different visualization.
+
+code: https://t.co/aNhAw6I9iJ https://t.co/0vZDLk0IkM"
+"37",2,"The data scientist in me cringed at plotting mean-only data. These data would be more interesting to dive into if there were more variables to control for, perhaps we could get to the bottom of this. But alas, data is never that sweet. #TidyTuesday #rstats https://t.co/orsEvBrgyu https://t.co/2TACKYIHww"
+"38",2,"Having some fun with #tidylo, a new package from @juliasilge for log odds ratios! Here we’re taking a look at popular baby names specific to the 1990s, 2000s, and 2010s. Curious about decades prior? Follow along with Julia’s blog! https://t.co/l90P9uFtCH #rstats  #tidytuesday https://t.co/Pcb0wmVrIn"
+"39",2,"In the beautiful Yorkshire Dales - miles away from McDonald's - bag spotted on a bench. It baffles me that people think this is ok!! It's now in a bin #TidyTuesday #cleanupbritain #KeepBritainTidy #yorkshiredales https://t.co/5m5ShQeW8y"
+"40",2,"Two #TidyTuesday submissions that look at the rapid rise of anime as well as the relationship between rating score and popularity rank on @myanimelist. Code: https://t.co/1BhlhPnYyC. #rstats #r4ds https://t.co/AdmTw0Z7aS"
+"41",2,"First #TidyTuesday submission <U+0001F973>!
+Didn't had much time for it but I had fun analysing meteorite <U+2604><U+FE0F>crash data using #tidyverse #ggplot2 and investigating the #ggdark package for super cool dark plots.
+Code <U+0001F449> https://t.co/fXLUSVNsSR
+Data <U+0001F449>https://t.co/w04gNJqBZL https://t.co/B5tDuwlJg7"
+"42",2,"#TidyTuesday #rstats my latest tidy tuesday submission first my first violin plot looking at self employed % in a number of states. Second child poverty rate against income per cap. Stay tuned for blog post trying to understand why Puerto Rico is so Poor https://t.co/PIe7HNKcxP"
+"43",2,"I really like helping people with their code but I have a tough time with how much to explain. I don't ever want to make anyone who asked for help feel dumb but it's a fine line between over explaining &amp; under explaining. #rstats #TuesdayThoughts #TidyTuesday https://t.co/7EvrnqpgCa"
+"44",2,"Week 22 #TidyTuesday
+How tasters think about the best wines?
+Frequently used words describing wines with highest ratings (score=100)<U+0001F377>
+Data from #kaggle 
+#WordCloud #R #programming #visualization https://t.co/o5X1aps2vs"
+"45",2,"This #TidyTuesday Week 31 - R and Package download stats, 
+Got distracted by NA's, discovered amazing packages: visdat &amp; naniar
+( visdat won't go on the large dataset, but it throws a friendly warning )
+ #rstats https://t.co/skfMJkD0B7"
+"46",2,"Just a straight attempt at recreating the original. Hopefully I have time later to come up with an original viz of the dataset. @thomas_mock #TidyTuesday #r4ds #rstats https://t.co/g4IfsBM956"
+"47",2,"It seems Singapore produce the top rated Instant Ramen #tidytuesday #rstats #r4ds #datascience #dataviz https://t.co/G19H1R5kvc"
+"48",2,"For this #TidyTuesday I tried to tackle the plot ""Still a man's world"", which is left as an open question in this very interesting blog post by @MissSarahLeo 
+
+Source blog post <U+0001F5DE><U+FE0F> : https://t.co/nJL4RPKNiI
+code <U+0001F468><U+200D><U+0001F4BB>: https://t.co/yGqK7wVjQi https://t.co/Ay9S3pj7WG"
+"49",2,"My contribution to #TidyTuesday - Recognized Star Wars characters ranked by favorability. The data comes from a @FiveThirtyEight survey from 2014. https://t.co/uKo5oXoMUR"
+"50",2,"A sad submission &amp; blog post https://t.co/CgRT1WkxUA  Code is available at  https://t.co/kuJdBQG4pn #rstats #R4DS #TidyTuesday https://t.co/779kyDsrkk"

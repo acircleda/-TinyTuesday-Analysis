@@ -165,6 +165,15 @@ cor(subset_tweets$retweet_count, subset_tweets$favorite_count, method = c("pears
 
 
 
-#random sample for content analysis
-sample <- sample_n(subset_tweets, 50)
-write.csv(sample, "50 random tweets.csv")
+# #random sample for content analysis
+# sample <- sample_n(subset_tweets, 50)
+# write.csv(sample, "50 random tweets.csv")
+# 
+# samples <- bind_rows(replicate(10, subset_tweets %>% select(text) %>% sample_n(50), simplify=F), .id="Sample")
+# samples$Sample <- as.numeric(samples$Sample)
+# 
+# samples %>% filter(Sample == 1) %>% write.csv("50-random-tweets-1.csv")
+# samples %>% filter(Sample == 2) %>% write.csv("50-random-tweets-2.csv")
+# samples %>% filter(Sample == 3) %>% write.csv("50-random-tweets-3.csv")
+# samples %>% filter(Sample == 4) %>% write.csv("50-random-tweets-4.csv")
+# samples %>% filter(Sample == 5) %>% write.csv("50-random-tweets-5.csv")
