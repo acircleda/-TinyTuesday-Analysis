@@ -1,15 +1,31 @@
 library(tidyverse)
 library(tidycode)
 library(lubridate)
-data <- read.csv("summary-table-all.csv")
+data <- read.csv("summary-table-all.csv") %>%
+  filter(screen_name !="jakekaupp")
 
-#length of code
+# mean number of functions per tweet number ----
 data %>%
   pivot_longer(communication:visualization, names_to = "function_type", values_to = "function_count") %>%
   group_by(tweet_num) %>%
   summarize(mean = mean(function_count)) %>% #average length of code
   ggplot(aes(x=tweet_num, y=mean))+
-  geom_col()
+  geom_col()+
+  geom_smooth(method='lm', aes(x=tweet_num, y=mean))
+
+#### -> Trend of slightly decreasing mean number of functions overall
+
+cor<-data %>%
+  pivot_longer(communication:visualization, names_to = "function_type", values_to = "function_count") %>%
+  group_by(screen_name, tweet_num) %>%
+  summarize(mean = mean(function_count))
+
+cor.test(cor$tweet_num, cor$mean)
+
+#### -> No correlation
+
+cor %>% ggplot()+
+  geom_point(aes(x=tweet_num, y=mean))
 
 #function trends by tweet number overall
 data %>%

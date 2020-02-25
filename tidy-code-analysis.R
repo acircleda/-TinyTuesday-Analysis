@@ -1,6 +1,7 @@
 library(tidyverse)
 library(tidycode)
 library(lubridate)
+library(tidycode)
 
 td <- read_rds("processed-data/processed-data.rds")
 tweet_data <- read_csv("processed-data/processed_urls.csv")
@@ -64,9 +65,24 @@ small_out_p <- small_out %>%
   mutate_if(is.numeric, replace_na, 0) %>% 
   distinct()
 
-# Merging
+## Final Data Merging -----
 
-sum_tab <- tds %>% 
+tidycode_analysis_n <- tds %>% 
+  left_join(small_out_n) %>% 
+  filter(!is.na(communication)) %>% 
+  group_by(screen_name) %>% 
+  distinct(status_id, .keep_all = T) %>%
+  arrange(created_at) %>% 
+  mutate(tweet_num = row_number()) %>%  #here is the problem
+  ungroup() %>% 
+  select(screen_name, status_url, created_at, favorite_count, retweet_count, tweet_num, total_n_funcs, communication:visualization) %>% 
+  mutate(recognitions = favorite_count + retweet_count) %>% 
+  select(-favorite_count, -retweet_count) %>% 
+  mutate_if(is.numeric, replace_na, 0) %>% 
+  arrange(screen_name, tweet_num) %>% 
+  select(tweet_num, total_n_funcs, recognitions, everything())
+
+tidycode_analysis_proportion <- tds %>% 
   left_join(small_out_p) %>% 
   filter(!is.na(communication)) %>% 
   group_by(screen_name) %>% 
@@ -80,106 +96,131 @@ sum_tab <- tds %>%
   arrange(screen_name, tweet_num) %>% 
   select(tweet_num, total_n_funcs, recognitions, everything())
 
-# Overall descriptives
 
-# means
+more_than_2 <- tidycode_analysis_n %>% group_by(screen_name) %>% 
+  count() %>% filter(n > 1)
 
-sum_tab %>% 
-  ungroup() %>%
-  summarize_if(is.numeric, mean) %>% View()
+classification <- tidycode_analysis_n %>% 
+  filter(screen_name %in% more_than_2$screen_name) %>%
+  pivot_longer(communication:visualization, names_to = "classification", values_to = "number")
 
-# corrs
 
-sum_tab %>% 
-  select_if(is.numeric) %>% 
-  mutate_if(is.numeric, scale) %>% 
-  as.matrix() %>% 
-  Hmisc::rcorr()
+## Analysis begins -----
 
-# write_csv(sum_tab, "summary-table-top-10-tweeters.csv")
+## check data
 
-to_keep <- sum_tab %>% 
-  count(screen_name) %>% 
-  arrange(desc(n)) %>% 
-  filter(!(screen_name %in% c("jakekaupp", "geomaramanis", "thomas_mock"))) %>% 
-  filter(n > 10)
+tmp <- classification %>%
+  group_by(screen_name, tweet_num) %>%
+  summarize(mean = mean(number))
 
+classification %>%
+  group_by(tweet_num) %>%
+  summarize(mean = mean(number)) %>% #average length of code
+  ggplot(aes(x=tweet_num, y=mean))+
+  geom_col()+
+  geom_smooth(method='lm', aes(x=tweet_num, y=mean))
+
+# 
+# # Overall descriptives
+# 
+# # means
+# 
+# sum_tab %>% 
+#   ungroup() %>%
+#   summarize_if(is.numeric, mean) %>% View()
+# 
+# # corrs
+# 
+# sum_tab %>% 
+#   select_if(is.numeric) %>% 
+#   mutate_if(is.numeric, scale) %>% 
+#   as.matrix() %>% 
+#   Hmisc::rcorr()
+# 
+# # write_csv(sum_tab, "summary-table-top-10-tweeters.csv")
+# 
+# to_keep <- sum_tab %>% 
+#   count(screen_name) %>% 
+#   arrange(desc(n)) %>% 
+#   filter(!(screen_name %in% c("jakekaupp", "geomaramanis", "thomas_mock"))) %>% 
+#   filter(n > 10)
+# 
+# # sum_tab %>% 
+# #   semi_join(to_keep) %>% 
+# #   ggplot(aes(x = created_at, y = total_n_funcs)) +
+# #   geom_point() +
+# #   facet_wrap(~screen_name)
+# 
+# split_tab <- sum_tab %>% 
+#   semi_join(to_keep) %>% 
+#   mutate(tweet_num_s = scale(tweet_num)) %>% 
+#   group_split(screen_name) %>% 
+#   map(select_if, is.numeric)
+# 
+# sum_tab <- tds %>% 
+#   left_join(small_out_n) %>% 
+#   filter(!is.na(communication)) %>% 
+#   group_by(screen_name) %>% 
+#   arrange(created_at) %>% 
+#   mutate(tweet_num = row_number()) %>% 
+#   ungroup() %>% 
+#   select(screen_name, status_url, created_at, favorite_count, retweet_count, tweet_num, total_n_funcs, communication:visualization) %>% 
+#   mutate(recognitions = favorite_count + retweet_count) %>% 
+#   select(-favorite_count, -retweet_count) %>% 
+#   mutate_if(is.numeric, replace_na, 0) %>% 
+#   arrange(screen_name, tweet_num) %>% 
+#   select(tweet_num, total_n_funcs, recognitions, everything())
+# 
+# #write.csv(sum_tab, "summary-table-all.csv")
+# 
+# sum_tab_s <- sum_tab %>% 
+#   semi_join(to_keep) 
+# 
+# sum_tab_s %>% 
+#   inner_join(sum_tab_s) %>% 
+#   mutate(screen_name= factor(screen_name, labels = str_c("Individual ", toupper(c("a", "b", "c", "d"))))) %>% 
+#   filter(screen_name == "Individual D")
+# 
+# sum_tab_s %>%   
+# 
+#   mutate(tweet_num_s = scale(tweet_num)) %>% 
+#   gather(key, val, communication:visualization)  %>% 
+#   group_by(screen_name, tweet_num) %>% 
+#   arrange(screen_name, tweet_num) %>% 
+#   mutate(row_num = row_number()) %>% 
+#   mutate(first_recognition = ifelse(row_num == 1, recognitions, NA)) %>% 
+#   mutate(key = tools::toTitleCase(key)) %>% 
+#   ungroup() %>% 
+#   ggplot(aes(x = tweet_num, y = val, group = key, fill = key, label = first_recognition)) +
+#   geom_text(size = 2.5, position = "stack", vjust = -1) +
+#   geom_col() +
+#   ggthemes::scale_fill_calc(NULL) +
+#   theme_bw() +
+#   xlab("Tweet Number") +
+#   ylab("Number of Functions in Code") +
+#   labs(caption = "The value above each bar is for the number of recognitions (favorites and retweets) the Tweet received")
+# 
+# ggsave(width = 10, height = 10, "tweets-by-user.png")
+# 
+# split_tab %>% 
+#   map(select_if, is.numeric) %>% 
+#   map(summarize_if, is.numeric, mean)
+# 
 # sum_tab %>% 
 #   semi_join(to_keep) %>% 
-#   ggplot(aes(x = created_at, y = total_n_funcs)) +
-#   geom_point() +
-#   facet_wrap(~screen_name)
-
-split_tab <- sum_tab %>% 
-  semi_join(to_keep) %>% 
-  mutate(tweet_num_s = scale(tweet_num)) %>% 
-  group_split(screen_name) %>% 
-  map(select_if, is.numeric)
-
-sum_tab <- tds %>% 
-  left_join(small_out_n) %>% 
-  filter(!is.na(communication)) %>% 
-  group_by(screen_name) %>% 
-  arrange(created_at) %>% 
-  mutate(tweet_num = row_number()) %>% 
-  ungroup() %>% 
-  select(screen_name, status_url, created_at, favorite_count, retweet_count, tweet_num, total_n_funcs, communication:visualization) %>% 
-  mutate(recognitions = favorite_count + retweet_count) %>% 
-  select(-favorite_count, -retweet_count) %>% 
-  mutate_if(is.numeric, replace_na, 0) %>% 
-  arrange(screen_name, tweet_num) %>% 
-  select(tweet_num, total_n_funcs, recognitions, everything())
-
-#write.csv(sum_tab, "summary-table-all.csv")
-
-sum_tab_s <- sum_tab %>% 
-  semi_join(to_keep) 
-
-sum_tab_s %>% 
-  inner_join(sum_tab_s) %>% 
-  mutate(screen_name= factor(screen_name, labels = str_c("Individual ", toupper(c("a", "b", "c", "d"))))) %>% 
-  filter(screen_name == "Individual D")
-
-sum_tab_s %>%   
-
-  mutate(tweet_num_s = scale(tweet_num)) %>% 
-  gather(key, val, communication:visualization)  %>% 
-  group_by(screen_name, tweet_num) %>% 
-  arrange(screen_name, tweet_num) %>% 
-  mutate(row_num = row_number()) %>% 
-  mutate(first_recognition = ifelse(row_num == 1, recognitions, NA)) %>% 
-  mutate(key = tools::toTitleCase(key)) %>% 
-  ungroup() %>% 
-  ggplot(aes(x = tweet_num, y = val, group = key, fill = key, label = first_recognition)) +
-  geom_text(size = 2.5, position = "stack", vjust = -1) +
-  geom_col() +
-  ggthemes::scale_fill_calc(NULL) +
-  theme_bw() +
-  xlab("Tweet Number") +
-  ylab("Number of Functions in Code") +
-  labs(caption = "The value above each bar is for the number of recognitions (favorites and retweets) the Tweet received")
-
-ggsave(width = 10, height = 10, "tweets-by-user.png")
-
-split_tab %>% 
-  map(select_if, is.numeric) %>% 
-  map(summarize_if, is.numeric, mean)
-
-sum_tab %>% 
-  semi_join(to_keep) %>% 
-  mutate(tweet_num_s = scale(tweet_num)) %>% 
-  group_split(screen_name) %>% 
-  map(select_if, is.numeric) %>% 
-  map(corrr::correlate)
-
-# allison_horst:
-# -
-
-# geokaramanis
-# - 
-
-# kigtembu
-# - more communication, exporting, and importing over time, less clecaning, less exploring
-
-# othomn
-# - 
+#   mutate(tweet_num_s = scale(tweet_num)) %>% 
+#   group_split(screen_name) %>% 
+#   map(select_if, is.numeric) %>% 
+#   map(corrr::correlate)
+# 
+# # allison_horst:
+# # -
+# 
+# # geokaramanis
+# # - 
+# 
+# # kigtembu
+# # - more communication, exporting, and importing over time, less clecaning, less exploring
+# 
+# # othomn
+# # - 

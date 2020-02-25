@@ -14,34 +14,34 @@ data <- read_rds("processed-data/processed-data.rds")
 
 pre <- data %>% unnest(urls_expanded_url)
 
-# process URLs
-
-shorteners <- c("bit.ly", "ow.ly", "buff.ly", "goo.gl", "ln.is", "tinyurl.com", "share.es", "ht.ly", "fb.me", "wp.me", "ift.tt")
-
-pre <- pre %>% 
-  mutate(domains = urltools::domain(urls_expanded_url),
-         need_to_expand = domains %in% shorteners)
-
-# this takes about 5 minutes to run
-expanded_urls <- pre %>% 
-  filter(need_to_expand) %>% 
-  pull(urls_expanded_url) %>% 
-  unique() %>% 
-  expand_urls()
-
-pre_expanded <- pre %>% 
-  mutate(index = 1:nrow(.)) %>% 
-  rename(orig_url = urls_expanded_url) %>% 
-  left_join(expanded_urls) %>% 
-  mutate(processed_url = ifelse(need_to_expand == 1, expanded_url, orig_url),
-         domain = domain(processed_url),
-         is_github_link = str_detect(domain, "github.com") & !str_detect(domain, "gist"),
-         is_gist_link = str_detect(domain, "gist.github.com")) %>% 
-  select(status_id, status_url, screen_name, created_at, processed_url)
-
-write_csv(pre_expanded, "processed-data/processed_urls.csv")
-
-# process data for descriptives
+# # process URLs
+# 
+# shorteners <- c("bit.ly", "ow.ly", "buff.ly", "goo.gl", "ln.is", "tinyurl.com", "share.es", "ht.ly", "fb.me", "wp.me", "ift.tt")
+# 
+# pre <- pre %>% 
+#   mutate(domains = urltools::domain(urls_expanded_url),
+#          need_to_expand = domains %in% shorteners)
+# 
+# # this takes about 5 minutes to run
+# expanded_urls <- pre %>% 
+#   filter(need_to_expand) %>% 
+#   pull(urls_expanded_url) %>% 
+#   unique() %>% 
+#   expand_urls()
+# 
+# pre_expanded <- pre %>% 
+#   mutate(index = 1:nrow(.)) %>% 
+#   rename(orig_url = urls_expanded_url) %>% 
+#   left_join(expanded_urls) %>% 
+#   mutate(processed_url = ifelse(need_to_expand == 1, expanded_url, orig_url),
+#          domain = domain(processed_url),
+#          is_github_link = str_detect(domain, "github.com") & !str_detect(domain, "gist"),
+#          is_gist_link = str_detect(domain, "gist.github.com")) %>% 
+#   select(status_id, status_url, screen_name, created_at, processed_url)
+# 
+# write_csv(pre_expanded, "processed-data/processed_urls.csv")
+# 
+# # process data for descriptives
 
 tweets <- flatten(data)
 
