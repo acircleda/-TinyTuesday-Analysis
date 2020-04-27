@@ -1,15 +1,15 @@
-"","Sample","text"
-"1",1,"#TidyTuesday Do you know how many passengers were served by the airports in each state in USA from 2013 to 2017?
-#rstats #r4ds #tidyverse #dataviz #ggplot2 #gridarrange #viridis https://t.co/veCttnodPK"
-"2",1,"Are rich countries more active R downloaders? #TidyTuesday #rstats  https://t.co/SSKeAFgcMZ https://t.co/9ZjotTbtlS"
-"3",1,"First ever #TidyTuesday submission! I've always been reluctant to share, because I see so many great submissions. But today I've done some new cool things (first time I made a map in R!!) and I'm quite happy with the result. Code is here: https://t.co/e5TQteuNcG #rstats #ggplot2 https://t.co/4od0xoL1EP"
-"4",1,"2019-07-16 #TidyTuesday #rstats R4ds Slack ! 
+,Sample,text,,,
+1,1,"#TidyTuesday Do you know how many passengers were served by the airports in each state in USA from 2013 to 2017?
+#rstats #r4ds #tidyverse #dataviz #ggplot2 #gridarrange #viridis https://t.co/veCttnodPK",findings,,
+2,1,Are rich countries more active R downloaders? #TidyTuesday #rstats  https://t.co/SSKeAFgcMZ https://t.co/9ZjotTbtlS,findings,,
+3,1,"First ever #TidyTuesday submission! I've always been reluctant to share, because I see so many great submissions. But today I've done some new cool things (first time I made a map in R!!) and I'm quite happy with the result. Code is here: https://t.co/e5TQteuNcG #rstats #ggplot2 https://t.co/4od0xoL1EP",celebrate,first time,sharing
+4,1,"2019-07-16 #TidyTuesday #rstats R4ds Slack ! 
 Prediction of messages for the following months, 
 highlighted each 15 days from 15/7 with line &amp; label
 and facet_zoom in the zone of interest.
-Enjoy :D https://t.co/MVRFkNW9IT"
-"5",1,"Late to the #TidyTuesday Meteorite <U+2604><U+FE0F>party. Saw some very impressive maps from people this week! You guys are inspiring me to step up my ggplot skills (I'm used to leaflet maps). Also challenging myself next round to combine plots in one graphic with plot_grid. #RStats https://t.co/fRk97xNjfo"
-"6",1,"3/3 plot 2: 
+Enjoy :D https://t.co/MVRFkNW9IT",explanation,,
+5,1,Late to the #TidyTuesday Meteorite <U+2604><U+FE0F>party. Saw some very impressive maps from people this week! You guys are inspiring me to step up my ggplot skills (I'm used to leaflet maps). Also challenging myself next round to combine plots in one graphic with plot_grid. #RStats https://t.co/fRk97xNjfo,challenged,inspired,late
+6,1,"3/3 plot 2: 
 
 correspondence analysis maps sentiment &amp; genre similarity:
 
@@ -17,108 +17,108 @@ correspondence analysis maps sentiment &amp; genre similarity:
 - e.g., joy with music, sports, kids; fear in military, thriller 
 
 #rstats #tidytuesday
-git: https://t.co/yZzvyZJQX9 https://t.co/OKbwNfKpFn"
-"7",1,"Nothing new, but it still surprising to analyze the data and see the difference. I would like to do the same analysis here for Brazil.
-#TidyTuesday #ggplot2 #rstats https://t.co/FpBLlYFlbj"
-"8",1,"Catching up with week 9 of #TidyTuesday, replicating @FiveThirtyEight charts as closely as I can. 
+git: https://t.co/yZzvyZJQX9 https://t.co/OKbwNfKpFn",explanation,,
+7,1,"Nothing new, but it still surprising to analyze the data and see the difference. I would like to do the same analysis here for Brazil.
+#TidyTuesday #ggplot2 #rstats https://t.co/FpBLlYFlbj",explanation,,
+8,1,"Catching up with week 9 of #TidyTuesday, replicating @FiveThirtyEight charts as closely as I can. 
 
-Code available at https://t.co/QbvW95lgq0 https://t.co/CNNhkBADeT"
-"9",1,"Awesome #tidytuesday in honor of #InternationalWomenDay2019 looking at women in the workforce. A simple density plot for major categories, then a deep dive on the gender mix in business fields for @coletteconover, who is applying to MBA programs! Code: https://t.co/ap70Y4B6BY https://t.co/CuetAouJXu"
-"10",1,"It's late so I am going to continue to work on this #TidyTuesday project in the morning but here's what I have so far image-wise! Still, need to tweak it. #rstats via @TheEconomist  thanks @MissSarahLeo!
+Code available at https://t.co/QbvW95lgq0 https://t.co/CNNhkBADeT",explanation,,
+9,1,"Awesome #tidytuesday in honor of #InternationalWomenDay2019 looking at women in the workforce. A simple density plot for major categories, then a deep dive on the gender mix in business fields for @coletteconover, who is applying to MBA programs! Code: https://t.co/ap70Y4B6BY https://t.co/CuetAouJXu",explanation,,
+10,1,"It's late so I am going to continue to work on this #TidyTuesday project in the morning but here's what I have so far image-wise! Still, need to tweak it. #rstats via @TheEconomist  thanks @MissSarahLeo!
 
-https://t.co/BaqcUALAMe https://t.co/fjd8ssgzeI"
-"11",1,"#TidyTuesday inspired by @sil_aarts https://t.co/ZYZ6z27xGs"
-"12",1,"Late entry into #TidyTuesday 's UFO week.  Wanted to see if the days with most reported sightings had a pattern.  I'm going to start a thread to share some things I thought are interesting about the results, here's the code: https://t.co/TUXA0DicO6 #rstats https://t.co/a2JcXHL9xN"
-"13",1,"Slow day at work, so doing my first #TidyTuesday. First thing that caught my eye were the licenses with no names.  Here's a breakdown by species.  Guessing the unnamed cats might be adopted alleycats or outdoor cats?
+https://t.co/BaqcUALAMe https://t.co/fjd8ssgzeI",sharing,late,
+11,1,#TidyTuesday inspired by @sil_aarts https://t.co/ZYZ6z27xGs,sharing,,
+12,1,"Late entry into #TidyTuesday 's UFO week.  Wanted to see if the days with most reported sightings had a pattern.  I'm going to start a thread to share some things I thought are interesting about the results, here's the code: https://t.co/TUXA0DicO6 #rstats https://t.co/a2JcXHL9xN",findings,late,
+13,1,"Slow day at work, so doing my first #TidyTuesday. First thing that caught my eye were the licenses with no names.  Here's a breakdown by species.  Guessing the unnamed cats might be adopted alleycats or outdoor cats?
 
-https://t.co/UCv9w1GQ5C https://t.co/Few7XsWShy"
-"14",1,"For this week's  #TidyTuesday and for the first time I definitely had to add an image to my ggplot graph. And yes, it had to be flying birds :)
+https://t.co/UCv9w1GQ5C https://t.co/Few7XsWShy",explanation,first time,
+14,1,"For this week's  #TidyTuesday and for the first time I definitely had to add an image to my ggplot graph. And yes, it had to be flying birds :)
 
-The code was inspired by https://t.co/UGkxf9z3RR https://t.co/pHNVgtV4Mp"
-"15",1,"Kept exploring the data for #TidyTuesday week 21, and did some very basic regression analysis. 
+The code was inspired by https://t.co/UGkxf9z3RR https://t.co/pHNVgtV4Mp",explanation,,
+15,1,"Kept exploring the data for #TidyTuesday week 21, and did some very basic regression analysis. 
 Also used Gelman's arm package to simulate predictions.
 S/T to @committedtotape for inspiration with ggridges.
-#rstats #tidyverse #dataviz https://t.co/vIkAt1yLMe"
-"16",1,"I haven't had long to look at this, but here is a bubble plot on a map of the UFO Sightings - interesting to see that the USA have had the most sightings! #tidytuesday #r4ds #r #dataviz https://t.co/Lb5AyjwWZ7"
-"17",1,"#tidytuesday this week looking at some space launch data from the Economist and dabbling with mixture models
+#rstats #tidyverse #dataviz https://t.co/vIkAt1yLMe",explanation,,
+16,1,"I haven't had long to look at this, but here is a bubble plot on a map of the UFO Sightings - interesting to see that the USA have had the most sightings! #tidytuesday #r4ds #r #dataviz https://t.co/Lb5AyjwWZ7",findings,,
+17,1,"#tidytuesday this week looking at some space launch data from the Economist and dabbling with mixture models
 my takeaway: the success rate of rocket launches have fortunately improved over time 
-code: https://t.co/Dwmn9T5Xcq https://t.co/xl8QFohM5T"
-"18",1,"Fascinating combo of hierarchical and time-series data in this week's #tidytuesday! First time making a treemap (for the hierarchy) and bump chart (popularity over time). I focused on engineering for the bump chart, any others worth looking at? Code: https://t.co/5lBEZMi4KZ https://t.co/9HdZOZ2ke5"
-"19",1,"#TidyTuesday Week 18 : I was interested to see the outcome of the different types of animals that entered the shelter. And was also curious to know which were the top breeds of dogs that got adopted. #dataviz #rstats  @thomas_mock 
-Code: https://t.co/5glqCAwCNW https://t.co/Bc6B5dWlDx"
-"20",1,"#TidyTuesday Week 30 
+code: https://t.co/Dwmn9T5Xcq https://t.co/xl8QFohM5T",findings,explanation,
+18,1,"Fascinating combo of hierarchical and time-series data in this week's #tidytuesday! First time making a treemap (for the hierarchy) and bump chart (popularity over time). I focused on engineering for the bump chart, any others worth looking at? Code: https://t.co/5lBEZMi4KZ https://t.co/9HdZOZ2ke5",explanation,,
+19,1,"#TidyTuesday Week 18 : I was interested to see the outcome of the different types of animals that entered the shelter. And was also curious to know which were the top breeds of dogs that got adopted. #dataviz #rstats  @thomas_mock 
+Code: https://t.co/5glqCAwCNW https://t.co/Bc6B5dWlDx",curiosoity,,
+20,1,"#TidyTuesday Week 30 
 
 FAA Wildlife Strike - Its only increasing YoY
 
-#r4ds #rstats #tidyverse #ggplot2 #DataViz https://t.co/jOQDu3JJMl"
-"21",1,"#TidyTuesday. Time flies so fast when coding #R, right?! 
+#r4ds #rstats #tidyverse #ggplot2 #DataViz https://t.co/jOQDu3JJMl",findings,,
+21,1,"#TidyTuesday. Time flies so fast when coding #R, right?! 
 
 Today a Divergent Lollipop Chart using z-scores (SD from the mean) for the age of a first #GrandSlam title (females only!). 
 
 Code:https://t.co/lyB9exJ7WU
-Source: Wikipedia https://t.co/yOmAnaGaYM"
-"22",1,"Back in the #TidyTuesday game! kmeans cluster analysis of train delay causes and how those station clusters relate to each other geographically. My first real foray into kmeans, so feedback is very welcome!
+Source: Wikipedia https://t.co/yOmAnaGaYM",explanation,,
+22,1,"Back in the #TidyTuesday game! kmeans cluster analysis of train delay causes and how those station clusters relate to each other geographically. My first real foray into kmeans, so feedback is very welcome!
 
 I see some clear geographic patterns here! 
 
-https://t.co/Q8TOsKiuKW https://t.co/NqDBpRhgZ5"
-"23",1,"Here's my #TidyTuesday submission.I studied the total increase in the housing index for each US State compared to the US federal index. No surprise in California house price has increased much more than the rest of US.The #mapdata library was <U+0001F44D><U+0001F3FC>@thomas_mock @R4DScommunity #rstats https://t.co/sYI1zKhIpC"
-"24",1,"Better late than never: my entry for #TidyTuesday week 12 :D
+https://t.co/Q8TOsKiuKW https://t.co/NqDBpRhgZ5",explanation,asking for feedback,
+23,1,Here's my #TidyTuesday submission.I studied the total increase in the housing index for each US State compared to the US federal index. No surprise in California house price has increased much more than the rest of US.The #mapdata library was <U+0001F44D><U+0001F3FC>@thomas_mock @R4DScommunity #rstats https://t.co/sYI1zKhIpC,findings,,
+24,1,"Better late than never: my entry for #TidyTuesday week 12 :D
 I merged the Google trends, TV and mediacloud data to show all of them over time, in one graph. 
 #rstats #r4ds #dataviz
 
 Code: https://t.co/tHwsBnJF6B
-Source: https://t.co/hIyFWky4wW https://t.co/JfpETGD25F"
-"25",1,"#tidytuesday I used to think all nobel peace price winners are grey old guys. Turns out, they are getting younger compared to the other folks. https://t.co/S1CP8Va16w. https://t.co/sjk0JBHMHg"
-"26",1,"#TidyTuesday turned into tidy Saturday this week! Looking at plastic pollution around the globe. I made a waffle chart of the five countries with most mismanaged plastic waste.
+Source: https://t.co/hIyFWky4wW https://t.co/JfpETGD25F",explanation,late,
+25,1,"#tidytuesday I used to think all nobel peace price winners are grey old guys. Turns out, they are getting younger compared to the other folks. https://t.co/S1CP8Va16w. https://t.co/sjk0JBHMHg",findings,,
+26,1,"#TidyTuesday turned into tidy Saturday this week! Looking at plastic pollution around the globe. I made a waffle chart of the five countries with most mismanaged plastic waste.
 
 Code: https://t.co/2VJSKkUaFX
 Source: https://t.co/KpjaJxR5rc
 
-#rstats #dataviz #ggplot #wafflechart https://t.co/tuGHqbAMdg"
-"27",1,"Simple Chart showing USA is the place to go for great wine followed by the European Powerhouses - France &amp; Italy #TidyTuesday https://t.co/dTLUOrPX32"
-"28",1,"This #tidytuesday was big for me! I wrote my first code walk through and put it on my new portfolio --&gt; https://t.co/t6bQ98hLrY. I made a faceted density plot of the 6 most popular board game mechanics over the years. Check out the walk through here https://t.co/tVyHZtdUHS https://t.co/7pYmkkTPos"
-"29",1,"Did a bit of work on week 10 #TidyTuesday - really want to try and make use of the baller @bizScienc tidy packages! 
+#rstats #dataviz #ggplot #wafflechart https://t.co/tuGHqbAMdg",explanation,,
+27,1,Simple Chart showing USA is the place to go for great wine followed by the European Powerhouses - France &amp; Italy #TidyTuesday https://t.co/dTLUOrPX32,findings,,
+28,1,This #tidytuesday was big for me! I wrote my first code walk through and put it on my new portfolio --&gt; https://t.co/t6bQ98hLrY. I made a faceted density plot of the 6 most popular board game mechanics over the years. Check out the walk through here https://t.co/tVyHZtdUHS https://t.co/7pYmkkTPos,explanation,first time,
+29,1,"Did a bit of work on week 10 #TidyTuesday - really want to try and make use of the baller @bizScienc tidy packages! 
 
-More to come! https://t.co/NvKihiaZXp"
-"30",1,"Good Morning!
+More to come! https://t.co/NvKihiaZXp",explanation,,
+30,1,"Good Morning!
 
-#CleaningUp #clean #cleaning #TidyingUp #TidyTuesday #TuesdayThoughts #TuesdayMorning #TuesdayMotivation #inspiration #Motivation #florida #lovefl #spacecoast #brevardcounty https://t.co/I8koOZVGkg"
-"31",1,"Back to #TidyTuesday. Chatterplot inspired by @dnlmc , Sentiment Analysis, and Wordcloud. #rstats @R4DScommunity https://t.co/3ZBFdugKwI"
-"32",1,"#TidyTuesday 2019 week 4 looks at American incarceration.  I examine female incarceration rates combined with poverty data from the American Community Survey #rstats #r4ds #acs #datascience @thomas_mock .  I need practice with grobs and grids.  Advice welcome. https://t.co/JtYAYRQkZM"
-"33",1,"Now with colour! Thanks to @theotheredgar for the tip - I was not using collapsibleTreeSummary  
+#CleaningUp #clean #cleaning #TidyingUp #TidyTuesday #TuesdayThoughts #TuesdayMorning #TuesdayMotivation #inspiration #Motivation #florida #lovefl #spacecoast #brevardcounty https://t.co/I8koOZVGkg",x,,
+31,1,"Back to #TidyTuesday. Chatterplot inspired by @dnlmc , Sentiment Analysis, and Wordcloud. #rstats @R4DScommunity https://t.co/3ZBFdugKwI",explanation,,
+32,1,#TidyTuesday 2019 week 4 looks at American incarceration.  I examine female incarceration rates combined with poverty data from the American Community Survey #rstats #r4ds #acs #datascience @thomas_mock .  I need practice with grobs and grids.  Advice welcome. https://t.co/JtYAYRQkZM,explanation,practice,
+33,1,"Now with colour! Thanks to @theotheredgar for the tip - I was not using collapsibleTreeSummary  
 
 Code here https://t.co/t7fENz9F5Z
 
-#TidyTuesday #rstats https://t.co/vKs1B7arTJ"
-"34",1,"For this #TidyTuesday I show the time frame of Venezuelan satellites launched by China. I am proud to be part of VRSS-2 Project, and I was lucky enough to live 1 year in China during development, and meet and work with extraordinary people #rstats #R4DS #dataviz https://t.co/rVeJTkoDnN"
-"35",1,"My #tidytuesday 20|2019 contribution: Number of Years between Nobel Prize and Death - Distribution and Average per Category #rstats
+#TidyTuesday #rstats https://t.co/vKs1B7arTJ",explanation,,
+34,1,"For this #TidyTuesday I show the time frame of Venezuelan satellites launched by China. I am proud to be part of VRSS-2 Project, and I was lucky enough to live 1 year in China during development, and meet and work with extraordinary people #rstats #R4DS #dataviz https://t.co/rVeJTkoDnN",findings,,
+35,1,"My #tidytuesday 20|2019 contribution: Number of Years between Nobel Prize and Death - Distribution and Average per Category #rstats
 
-Code: https://t.co/b015aRyU9Q https://t.co/6DhhhjBolH"
-"36",1,"#TidyTuesday
+Code: https://t.co/b015aRyU9Q https://t.co/6DhhhjBolH",explanation,,
+36,1,"#TidyTuesday
 1. Just, wow. (sure, lots of confounders like experience etc., but those don't account for everything)
 2. There's a better way to order the factors for this plot, right? TELL ME.
-3. position_dodge led to overlapping bars. Happy accident. https://t.co/tZHP4ZpLTn"
-"37",1,"Bonus #TidyTuesday chart showing changes in total wind output and turbine efficiency since 2000. https://t.co/jfIhaNf3Iw"
-"38",1,"Analysing the day of the week movies are released. Most released on Friday, highest gross on Thursday #TidyTuesday https://t.co/wQrDsOPZ0Z"
-"39",1,"Datos de la Balanza comercial #Argentina , años 1910-2018 
+3. position_dodge led to overlapping bars. Happy accident. https://t.co/tZHP4ZpLTn",explanation,learned,
+37,1,Bonus #TidyTuesday chart showing changes in total wind output and turbine efficiency since 2000. https://t.co/jfIhaNf3Iw,explanation,,
+38,1,"Analysing the day of the week movies are released. Most released on Friday, highest gross on Thursday #TidyTuesday https://t.co/wQrDsOPZ0Z",explanation,finding,
+39,1,"Datos de la Balanza comercial #Argentina , años 1910-2018 
 #dataviz del colapso economico del 2001 y su impacto.
- Evolución de la balanza comercial argentina en base a datos del @INDECArgentina #rstats  #TidyTuesday #Posadas #Misiones https://t.co/w4UCbzAqdU"
-"40",1,"No outside data for this weeks #TidyTuesday, I used some new #ggthemes to try to make the plot prettier, comparing search trends on google to the online media coverage. If it gets googled, it gets written about. https://t.co/XzyuDCebSn"
-"41",1,"My #tidytuesday viz this week is inspired by awesome people who make scarves from data. Can't knit, but I can geom_linerange <U+0001F937><U+200D><U+2640><U+FE0F>. 
+ Evolución de la balanza comercial argentina en base a datos del @INDECArgentina #rstats  #TidyTuesday #Posadas #Misiones https://t.co/w4UCbzAqdU",explanation,,
+40,1,"No outside data for this weeks #TidyTuesday, I used some new #ggthemes to try to make the plot prettier, comparing search trends on google to the online media coverage. If it gets googled, it gets written about. https://t.co/XzyuDCebSn",explanation,,
+41,1,"My #tidytuesday viz this week is inspired by awesome people who make scarves from data. Can't knit, but I can geom_linerange <U+0001F937><U+200D><U+2640><U+FE0F>. 
 
-Code: https://t.co/RRjDzxvv5d https://t.co/Ng8SEWZnhv"
-"42",1,"#TidyTuesday #rstats Week 2018-10-23: Horror Movies and Profit
-<U+0001F604> https://t.co/il1PRjzahP"
-"43",1,"Another early #TidyTuesday, I try to compare number of UFO sighting with space-related movies and the internet. It seems that as information flow more easily with the search engine and social media, the number of reported UFO sighting has been growing at unprecedented rate. https://t.co/00RXHhc88w"
-"44",1,"Top 7 people by average number of likes and retweets on #rstats posts in 2018 (of those with at least 10 #rstats tweets). I looked at only those with at least 10 since a few people posted only 1 or 2 very popular tweets. #tidytuesday
+Code: https://t.co/RRjDzxvv5d https://t.co/Ng8SEWZnhv",explanation,inspired,
+42,1,"#TidyTuesday #rstats Week 2018-10-23: Horror Movies and Profit
+<U+0001F604> https://t.co/il1PRjzahP",sharing,,
+43,1,"Another early #TidyTuesday, I try to compare number of UFO sighting with space-related movies and the internet. It seems that as information flow more easily with the search engine and social media, the number of reported UFO sighting has been growing at unprecedented rate. https://t.co/00RXHhc88w",findings,explanation,
+44,1,"Top 7 people by average number of likes and retweets on #rstats posts in 2018 (of those with at least 10 #rstats tweets). I looked at only those with at least 10 since a few people posted only 1 or 2 very popular tweets. #tidytuesday
 
-Code: https://t.co/mvypfJybuR https://t.co/6FPeW4zelU"
-"45",1,"#TidyTuesday #rstats #dataviz This week, about ""Christmas Bird Counts"", the ""Top 15 Birds that are less observed in the decade of 2000 compared to the 1990"", I hope the reason is not that there are less out there. https://t.co/eAIVt7RmpL"
-"46",1,"My first #TidyTuesday! I create two heatmaps of the score by decade and by source and genre :) https://t.co/oVU0UZWBoP"
-"47",1,"This week: 2018-11-20 #TidyTuesday #rstats opted by TDOR data, as is more global. keep experimenting on maps. ( tmap+gganimate gifs ) other info: 5yr bin info + missings on dataset. check thread <U+0001F642> https://t.co/PDjWKfxYlE"
-"48",1,"Late one on meteorites for #tidyTuesday, clear signs of underreporting in the developing world. Spent way too much time playing around with colours. #rstats https://t.co/sbclN0oJtr"
-"49",1,"This #TidyTuesday is quite heavy, hehe. I thought it would be cool to see in red those meteorites that fell and in blue those that were found. I liked the final result.
+Code: https://t.co/mvypfJybuR https://t.co/6FPeW4zelU",explanation,,
+45,1,"#TidyTuesday #rstats #dataviz This week, about ""Christmas Bird Counts"", the ""Top 15 Birds that are less observed in the decade of 2000 compared to the 1990"", I hope the reason is not that there are less out there. https://t.co/eAIVt7RmpL",explanation,,
+46,1,My first #TidyTuesday! I create two heatmaps of the score by decade and by source and genre :) https://t.co/oVU0UZWBoP,explanation,first time,
+47,1,"This week: 2018-11-20 #TidyTuesday #rstats opted by TDOR data, as is more global. keep experimenting on maps. ( tmap+gganimate gifs ) other info: 5yr bin info + missings on dataset. check thread <U+0001F642> https://t.co/PDjWKfxYlE",explanation,experimenting,
+48,1,"Late one on meteorites for #tidyTuesday, clear signs of underreporting in the developing world. Spent way too much time playing around with colours. #rstats https://t.co/sbclN0oJtr",explanation,late,
+49,1,"This #TidyTuesday is quite heavy, hehe. I thought it would be cool to see in red those meteorites that fell and in blue those that were found. I liked the final result.
 
-code here : https://t.co/f0QCG5nfYe https://t.co/K1tFtgsoSX"
-"50",1,"I can´t believe I am submitting a #tidytuesday on time <U+0001F91F><U+0001F3FC>. Plotting the top 5 teams that provide more players for each position using data from https://t.co/YjzeKbilnm https://t.co/NUB5p5xpsF"
+code here : https://t.co/f0QCG5nfYe https://t.co/K1tFtgsoSX",explanation,,
+50,1,I can´t believe I am submitting a #tidytuesday on time <U+0001F91F><U+0001F3FC>. Plotting the top 5 teams that provide more players for each position using data from https://t.co/YjzeKbilnm https://t.co/NUB5p5xpsF,explanation,,

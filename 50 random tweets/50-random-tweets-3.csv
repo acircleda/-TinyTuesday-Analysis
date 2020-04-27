@@ -1,145 +1,98 @@
-"","Sample","text"
-"1",3,"My #TidyTuesday submission, showing some of the LEAST popular pet names in Seattle, and trust me, these are worth reading. #rstats https://t.co/k97pCXSoJT"
-"2",3,"overlaying UFO sighting with bigfoot provides some interesting results. #TidyTuesday #ggplot2 .The code https://t.co/U2Cp5UsN3X . Plot was edited in Inkscape to make it look fancy https://t.co/zJ3BjED9xK"
-"3",3,"It’s been exciting to watch Ss create visualizations and calculate statistics using @rstudio and then storyboard using sticky notes as they plan to write their blog articles! Thanks #TidyTuesday for data and @storywithdata for the sticky note idea! - Mr. Adams https://t.co/EF9LRIRcnO"
-"4",3,"""Studies have shown that people enjoy identical products such as wine more if they have a higher price tag""
-Fortunately, there are plenty of good wines for $20 or less including Algerian wine not listed here.  
-#TidyTuesday https://t.co/ASKgnstPjn"
-"5",3,"Super late #tidytuesday this week! Fixed @TheEconomist plot on women in research. Not a huge fan of the coord_plot for clarity, but everyone else already used the best options and this was a different and fun. Code: https://t.co/ZRRlYtv0JD https://t.co/S556Yuikfb"
-"6",3,"#TidyTuesday movies dataset from 538 vis. Highlights shoestring budgets horror movies enjoying big payoffs.  #fallcolors == viridis' inferno. scale_color_viridis_c(option = ""B"") https://t.co/xULkWeRXzb"
-"7",3,"#TidyTuesday. Mismanaged waste of 'top' 36 countries as % of Sri Lanka; country with the highest kg per person per day: 0.299kg. Lighter shade of grey...
-
-*My son chose the yellow color and titled this plot as 'pacman'! 
-
-Code: https://t.co/7zmVawPz3G
-Source: Our World in Data. https://t.co/IqnEXIXFwx"
-"8",3,"#TidyTuesday video games data. The median price shows that games are getting cheaper now. Too bad many games don't have Metascore. Games Metascore looks better in early 2000. Is current games bad? Or is it because our expectation to games are rising?
-
-https://t.co/oGs9Nch9DT https://t.co/13f3rBRsdO"
-"9",3,"Clean like nobody is watching! <U+0001F57A> 
-
-#tidytuesday #clean #cleaning https://t.co/7pUu2ZrMC4"
-"10",3,"#rstats #ggplot #hrbrthemes  #tidytuesday @R4DScommunity week23 fast food restaurants. I looked at  total trans fats in the menus. code: https://t.co/K0M3ke7bZY https://t.co/QCmIZjyj8d"
-"11",3,"So NYC Restaurants. Ha. My take on this topic. 
-The code in GitHub: https://t.co/vbTREkq32Y  #TidyTuesday #rstats https://t.co/AFDjiOfk9o"
-"12",3,"#TidyTuesday Women's world cup. Did a similar plot for the men's tournament a while ago. US and Germany were about even in cumulative goals last tournament, but the US has pulled ahead.
-
-#dataviz #rstats https://t.co/WAPMsey767"
-"13",3,"It's #TidyTuesday again!
-I compared how many acres burn across fire origins. 
-Perhaps natural fires burn more is because they are in less accessible areas? Would have checked fire duration too but too much missing data.
-See my code at:
-https://t.co/3LyhhIAvdz https://t.co/3v0yLMqTAx"
-"14",3,"#R #TidyTuesday. 
-""Drop the synopsis"" to free up space wrote @thomas_mock on #Github.
-I decided not to...<U+0001F648>
-Used the synopsis for some text-mining to practice a bit for work.
-
-Code: https://t.co/7zmVawPz3G
-Source: MyAnimateList https://t.co/0XsoaMr25P"
-"15",3,"Happy #TidyTuesday. Here's an infographic made 100% in #Rstats about how infinitives in a @Medium post's title reflects the content of the post. 
-
-Also, I had to accept that I will be perennially late with this, since Tuesdays are always crazy busy.
-https://t.co/rREVibjG2a https://t.co/iCfgGGR7b8"
-"16",3,"Part two of teaching myself purrr with #tidytuesday: Fitting Gaussian processes and generalised additive models to budget data. Code and more at https://t.co/JnSFcL4S0j #R4DS https://t.co/GZe6mz6YgB"
-"17",3,"Week 27 #TidyTuesday
-Sunburst diagram visualising the revenues by owners, franchise and revenue category <U+0001F4FA><U+0001F4CA>
-
-#R #rstat #dataviz #programming https://t.co/4Lx2vP1CDN"
-"18",3,"#TidyTuesday #rstats Week 2018-10-23: Horror Movies and Profit
-<U+0001F604> https://t.co/il1PRjzahP"
-"19",3,"Geom_waffle with a ""passion-fruit"" colour scheme... wasn't hungry before figuring this out, but am now
-
-@PodsProgram #r4ds #rstats #tidytuesday (#butonthursday) https://t.co/yamaZyg6XI"
-"20",3,"#TidyTuesday Here's my graph for this week. I didn't have much time so I chose to make a very simple graph.
-
-All feedback is welcome!
-
-Code:https://t.co/FUXjNmsIet
-#rstats #dataviz https://t.co/pKaECW4gzs"
-"21",3,"#TidyTuesday this week is about gender pay disparity in the USA. 
-
-First plot: female salary as a percentage of male salary
-
-#rstats https://t.co/dvjCddAVB6"
-"22",3,"Dramas have the lowest median return on investment (ROI) out of these 5 movie genres but have the potential to do really well. Interesting that horror films have the highest median ROI but so few are made. #TidyTuesday https://t.co/lDpPq4D11d"
-"23",3,"this is my attempt to visualize the same data
-#TidyTuesday #rstats #dataviz 
-code: https://t.co/wVFl9kwckC https://t.co/H9BQIBDi1N"
-"24",3,"Common genre combinations in anime and manga. #TidyTuesday #rstats https://t.co/qQLjshwIXD"
-"25",3,"Our 2nd #tidytuesday hacky hours, with four @ucsantabarbara departments represented (@brenucsb, Anthropology, EEMB, Environmental Studies) + @nceas! <U+0001F973><U+0001F3BE><U+0001F4C8> #rstats https://t.co/ComwmTSHDV"
-"26",3,"Here is my #TidyTuesday graph (or chart?)
-And here is my code: https://t.co/wwgW5Qsimk
-
-Real quick, do people prefer #github or #Rpubs?
-
-#DataScience 
-#learning
-#tidyverse 
-#anime https://t.co/BwXbKY3IC6"
-"27",3,"UFO sightings for #TidyTuesday and I look at the top 10 cities in the world with the most reported encounters (all in the US). I didn't do any data cleaning at all, so the numbers shown may not correspond to reality <U+0001F604>
-
-code: https://t.co/K7Cn6uogr0 https://t.co/eU5mZxyUgR"
-"28",3,"My little #TidyTuesday contribution :) https://t.co/xEssb6YAnT"
-"29",3,"Also used the #gganimate package again. It worked very smoothly with the maps data, thank God! #tidytuesday #tidyverse #tidystats https://t.co/NWyuRShkSu"
-"30",3,"Work from today's #rladies Ames #TidyTuesday lunch posted! https://t.co/sIp1iEZBku
-
-This week, we looked at the first letter of pet names by species. 
-
-There are also 2 goats named Heidi <U+0001F467><U+0001F3FC><U+0001F602> https://t.co/Pts0HbyJfY"
-"31",3,"#Tidytuesday challenge 3: Space race. The opposition between the US and the Soviet Union is flagrant, as is their decline at the end of cold war. In recent days, Asia countries have risen as the main launchers. In the west, private companies now dominate the sector. #r4ds https://t.co/dQV6LNDgDN"
-"32",3,"#TidyTuesday. I used an 'inverted excel file', not the clean csv, so this week took a lot of 'cleaning', but here are the PhD awards in Psychology&amp;Social Sciences. Not equally distributed...
-
-Source: NSF
-Code: Pics https://t.co/cYFGpttBZJ"
-"33",3,"Only recently started following #TidyTuesday so went back through the archives and couldn't resist when I saw an #NFL dataset. Realised the data was flawed after plotting though when I saw no 2000 yard season for CJ2k. #rstats https://t.co/CEM0pCi1fO"
-"34",3,"#TidyTuesday 2019 W17
-Is there a relation between score and popularity??
-code:https://t.co/3MOiNiEGfR
-Any feedback is welcome!
-#Rstats #DataViz https://t.co/B6yLiJ7xKo"
-"35",3,"This week I looked at the effect Easter has on US births. (next step: find out how to adjust for day of week effect) <U+0001F430>
-
-code: https://t.co/5B4mq4JhoH
-
-#TidyTuesday #rstats #R4DS #dataviz https://t.co/lU0Vx5aXW5"
-"36",3,"My second #TidyTuesday submission!  I played around with different colors, fonts, annotations, and more.  It was a blast! @R4DScommunity Code:  https://t.co/rGAH369FZD https://t.co/Qc32qMdklN"
-"37",3,"#TidyTuesday Where is the best ramen? <U+0001F35C><U+0001F35C><U+0001F35C>
-(2nd position France????? <U+0001F631><U+0001F631><U+0001F631><U+0001F631>)
-
- #ggplot2 #rstat #R4DS #ramen #PhDlife
-@R4DScommunity @rstudio @rstats4ds 
-
-Scroll down to the next tweet to see the animation by style of container <U+0001F4CA> https://t.co/VJrGazn1A9"
-"38",3,"I finally did it - I have a personal homepage <U+0001F973>
-In the future, I am going to blog about #ecology, #science and #dataviz, sharing #rstats packages, code snippets and tutorials and of course thoughts and insights on the #TidyTuesday contributions <U+0001F913>
-
-https://t.co/7MEZEIDt8a https://t.co/X4ra2mtB0Y"
-"39",3,"Plotted just the longitude and latitude values and found an outlier (-1.94617, 354.47333) #TidyTuesday. It looks like a meteorite found on Mars has sneaked in (? @NASA) the dataset. It's Meridiani Planum, aka Heat Shield Rock.
-https://t.co/Q7hlSMAFN9 https://t.co/r4VHianMQT"
-"40",3,"First submission ever for #tidytuesday. Spent too much time tweaking the graph but couldn't help it!
-
-code: https://t.co/XbPhhBRTir https://t.co/SAky2r5JeL"
-"41",3,"Evolution of a map for #TidyTuesday #rstats code here: https://t.co/14o2gaZdzv https://t.co/lS7YNTF6uV"
-"42",3,"Squeezing in a #tidytuesday dataset during lunch for games on Steam since 2005 (note: y-axis horribly not to scale)
-Additional analysis required with revenue data but it appears Big Fish Games is all about that super niche long tail market
-#rstats code: https://t.co/bqP6CoKbNV https://t.co/KXQ4mQkqw4"
-"43",3,"#TidyTuesday Blog post! Here's my final graph.  #rstats https://t.co/sCM4Th9aAH https://t.co/IP7TvLommL"
-"44",3,"#TidyTuesday contribution 2019/20: Nobel prize winners, data provided by @kaggle and the @NobelPrize 
-
-No line plot was the premise - had to take a break to think about a different way of visualization and this is what came out of it <U+0001F481><U+200D><U+2642><U+FE0F>
-
-#rstats #tidyverse #ggplot2 #r4ds #dataviz https://t.co/5K8Gop6kpU"
-"45",3,"Voronoi tesselation of ~random pixels from one of Bob Ross paintings :)
-
-As learned from @chisatini's wonderful blog <U+0001F64C> https://t.co/FczvMDtxfK (yes, for the second time <U+0001F62C><U+0001F601>)
-
-<U+0001F5BC><U+FE0F>: https://t.co/6OJgRGUtv1
-<U+0001F468><U+200D><U+0001F4BB>: https://t.co/nZvcQ9jvDh
-
- Happy #TidyTuesday <U+0001F917> https://t.co/bWtmCeFJ7P"
-"46",3,"For this #TidyTuesday, a look at diversity in U.S. counties (with apologies to Puerto Rico). Many counties are primarily White and we see large Hispanic and Asian pop'ns in the West/SW, Black pop'ns in the South/NE, Native Amer. in MT, SD, ND &amp; AK, and Pac. Islanders in Hawaii. https://t.co/ssm8FAijLD"
-"47",3,"It seems Singapore produce the top rated Instant Ramen #tidytuesday #rstats #r4ds #datascience #dataviz https://t.co/G19H1R5kvc"
-"48",3,"#TidyTuesday week 10 with #ggmap #glue #lubridate, and new to #patchwork. Themes from @dylanjm_ds https://t.co/xK10cyspUU https://t.co/VriEG5EbYX"
-"49",3,"#TidyTuesday I was curious about the concentration of coffee-chains in markets that included these 3 major chains. I defined markets by zip and used HHI's to calculate concentration. &gt;1500 is quite high though I am ignoring other coffee shops, etc. https://t.co/tQH45PMyRf https://t.co/ER66KqgETU"
-"50",3,"It has definitely been a while. #TidyTuesday week 28 contribution. Playing around with coord_polar for the first time! #rstats #r4ds #tidyverse #ggplot2 https://t.co/qVO3LORrVS"
+explanation,,,,,,
+explanation,,,,,,
+excitement,,,,,,
+findings,,,,Row Labels,Count of explanation,Count of explanation2
+explanation,,,,asking for feedback,1,1.64%
+explanation,,,,celebrating,1,1.64%
+explanation,,,,collaboration,2,3.28%
+findings,,,,excitement,4,6.56%
+,,,,explanation,27,44.26%
+explanation,,,,findings,11,18.03%
+sharing,,,,first time,1,1.64%
+findings,,,,late,2,3.28%
+explanation,,,,learning,4,6.56%
+learning,,,,sharing,8,13.11%
+explanation,,,,(blank),,0.00%
+learning,,,,Grand Total,61,100.00%
+explanation,,,,,,
+sharing,,,,,,
+learning,,,,,,
+asking for feedback,,,,,,
+explanation,,,,,,
+findings,,,,,,
+sharing,,,,,,
+explanation,,,,,,
+collaboration,,,,,,
+sharing,,,,,,
+explanation,,,,,,
+sharing,,,,,,
+explanation,,,,,,
+collaboration,,,,,,
+findings,,,,,,
+explanation,,,,,,
+excitement,,,,,,
+sharing,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+sharing,,,,,,
+celebrating,,,,,,
+findings,,,,,,
+first time,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+sharing,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+findings,,,,,,
+findings,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+learning,,,,,,
+,,,,,,
+late,,,,,,
+,,,,,,
+findings,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+late,,,,,,
+explanation,,,,,,
+,,,,,,
+,,,,,,
+explanation,,,,,,
+explanation,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+explanation,,,,,,
+,,,,,,
+findings,,,,,,
+,,,,,,
+explanation,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+excitement,,,,,,
+,,,,,,
+findings,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+excitement,,,,,,

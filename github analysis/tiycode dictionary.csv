@@ -1,0 +1,1528 @@
+func,classification
+-,data cleaning
+:,data cleaning
+::,data cleaning
+:=,data cleaning
+!,data cleaning
+!=,data cleaning
+.,data cleaning
+.libPaths,setup
+(,data cleaning
+[,data cleaning
+[[,modeling
+{,data cleaning
+@,data cleaning
+*,data cleaning
+/,data cleaning
+&,data cleaning
+&&,data cleaning
+%*%,modeling
+%/%,setup
+%%,exploratory
+%+%,visualization
+%<>%,data cleaning
+%>%,other
+%$%,data cleaning
+%do%,evaluation
+%dopar%,modeling
+%in%,data cleaning
+^,modeling
++,modeling
+<,data cleaning
+<-,other
+<<-,setup
+<=,data cleaning
+=,other
+==,data cleaning
+>,other
+>=,data cleaning
+|,modeling
+||,data cleaning
+~,modeling
+$,data cleaning
+a,setup
+abbreviate,setup
+abiotic_resid,exploratory
+abline,visualization
+abs,modeling
+acast,data cleaning
+acf,data cleaning
+actionButton,communication
+ACURRACY,setup
+add_rmse_rankings,data cleaning
+add_row,exploratory
+add.axes,visualization
+addpoly,modeling
+adf.test,evaluation
+adply,communication
+aes,visualization
+aggregate,data cleaning
+AggregateLooks,data cleaning
+agreement,export
+AIC,evaluation
+all,data cleaning
+all.equal,data cleaning
+allPuristOut,import
+alpha,visualization
+alphaMLG,exploratory
+analysis,import
+Analyze,modeling
+analyzeMetdataWithGenes,exploratory
+animal_resid,exploratory
+ann,exploratory
+annotate,visualization
+AnnotatedDataFrame,exploratory
+annotatePeak,visualization
+annotation,import
+anova,modeling
+Anova,evaluation
+anovaBF,evaluation
+anti_join,modeling
+any,data cleaning
+anyDuplicated,data cleaning
+aov,modeling
+apa.2way.table,communication
+apa.d.table,communication
+append,data cleaning
+appender.file,setup
+apply,data cleaning
+arrange,data cleaning
+array,data cleaning
+arrows,visualization
+as,data cleaning
+as_data_frame,data cleaning
+as_dribble,evaluation
+as_tibble,import
+as.character,data cleaning
+as.data.frame,data cleaning
+as.data.table,data cleaning
+as.Date,data cleaning
+as.dist,data cleaning
+as.double,data cleaning
+as.factor,data cleaning
+as.formula,modeling
+as.integer,data cleaning
+as.list,data cleaning
+as.logical,exploratory
+as.matrix,data cleaning
+as.numeric,data cleaning
+as.phylo,import
+as.POSIXlt,data cleaning
+as.tbl,data cleaning
+as.vector,data cleaning
+as.yearmon,data cleaning
+ascii,export
+asDataFrame,import
+assembly.counts,visualization
+assert,setup
+assign,export
+atan,setup
+ato,modeling
+attach,import
+attributes,import
+auc,modeling
+authenticate,export
+average_twin_level_1,evaluation
+average_twin_level_2,evaluation
+axis,visualization
+b.diffste,modeling
+b.showsiglev,modeling
+b.studentized_ttest,modeling
+bal.table,evaluation
+bar,visualization
+barplot,visualization
+base,import
+basename,setup
+BAYES.THR,data cleaning
+BayesFactor_InformedNormal,modeling
+beep,communication
+beepr,communication
+BESTmcmc,exploratory
+bf10,modeling
+binconf,communication
+bind_plans,data cleaning
+bind_rows,data cleaning
+binom.test,data cleaning
+binomial,modeling
+biocLite,data cleaning
+blockwiseModules,modeling
+booktabs,data cleaning
+booter,modeling
+bootstrapPage,setup
+bottom_10,evaluation
+box,data cleaning
+boxplot,visualization
+bquote,visualization
+br,communication
+breakpoints,exploratory
+brewer.pal,visualization
+"brewer.pal(8, ""Spectral"")",visualization
+brm,modeling
+buffer,data cleaning
+build_feature_matrix,exploratory
+build.tcga.ds,modeling
+byPop_plot,visualization
+byYear_plot,communication
+c,visualization
+ca.jo,evaluation
+CairoFonts,visualization
+CairoPDF,export
+CairoTIFF,export
+calc_port_df,exploratory
+calc_vessel_vars,exploratory
+calculate_roc_binary_classifier,modeling
+calculateCQN,modeling
+calculateQCMetrics,import
+capture.output,communication
+car,modeling
+caret,modeling
+case_when,data cleaning
+case.two,exploratory
+cat,communication
+cauchy,import
+CauchyKernel,modeling
+cbind,data cleaning
+ceiling,data cleaning
+cellColors,setup
+character,import
+characterize_metiers,data cleaning
+check_MCMC,evaluation
+checkboxInput,setup
+chi_sq_list,communication
+chisq.test,evaluation
+CI,evaluation
+CI_coef,modeling
+ci.high,exploratory
+ci.low,exploratory
+ciOverlap,evaluation
+circular,setup
+class,exploratory
+classAgreement,evaluation
+cleanTrumpPredictions,data cleaning
+cliff.delta,modeling
+climate_sim,import
+close,export
+cloud,visualization
+cmapR,import
+coef,data cleaning
+coef_CI,evaluation
+coef.hclust,modeling
+coefficients,modeling
+col_factor,import
+colData,data cleaning
+collect,import
+colMeans,exploratory
+colnames,data cleaning
+color_to_hex,visualization
+colorRampPalette,visualization
+cols,import
+colSums,exploratory
+column,communication
+ComBat,modeling
+combn,modeling
+comdistnt,data cleaning
+commandArgs,setup
+comp_fun,evaluation
+compare_distributions,evaluation
+compare_models,evaluation
+compare_optimized,export
+compareCluster,modeling
+compareWordsWithinLanguage,evaluation
+compareWordsWithinLanguage_Domain,evaluation
+complete,data cleaning
+complete.cases,data cleaning
+compute_all_triplets,exploratory
+compute_bias_growth_curves,visualization
+computePCAMatCor,modeling
+confint,evaluation
+confusionMatrix,modeling
+constructDesignMatrix_acLDL,setup
+constructDesignMatrix_SL1344,data cleaning
+contains,data cleaning
+contour,visualization
+contrasts,exploratory
+convert.factors.to.strings,data cleaning
+coord_cartesian,visualization
+coord_equal,setup
+coord_flip,visualization
+coord_map,visualization
+coord_polar,visualization
+coordinates,setup
+coords,evaluation
+cophenetic,data cleaning
+cor,modeling
+cor.test,modeling
+Corpus,data cleaning
+corrplot,modeling
+count,exploratory
+count_targets,data cleaning
+countrycode,data cleaning
+cov,exploratory
+covplot,modeling
+cowplot,visualization
+coxph,modeling
+create_analyzer,data cleaning
+create_better_dt_events,setup
+create_event_locations_shared,data cleaning
+create_vessel_landings,exploratory
+createDataPartition,import
+createLatexTable,export
+crossprod,modeling
+CRS,data cleaning
+crump,modeling
+cum_normal_fun,data cleaning
+cumsum,data cleaning
+cumTransAlleles,modeling
+cut,data cleaning
+cut_by_thirds,data cleaning
+cut2,data cleaning
+cutree,visualization
+cv.glm,modeling
+cv.glmnet,modeling
+d_group_means,exploratory
+dapc,exploratory
+dapc.plot,visualization
+data,import
+data_frame,data cleaning
+data_movies,exploratory
+data.frame,data cleaning
+data.table,import
+dataTableOutput,setup
+days,data cleaning
+dba,import
+dba.analyze,modeling
+dba.contrast,modeling
+dba.plotHeatmap,visualization
+dba.report,communication
+dbConnect,import
+dbscan,modeling
+dcast,data cleaning
+dcast.data.table,data cleaning
+ddply,modeling
+defaultPlotTheme,visualization
+define_participationPlot,visualization
+degFullToDegSemi,data cleaning
+degFullToRadFull,data cleaning
+degree,visualization
+degSemiToDegFull,data cleaning
+density,visualization
+deparse,data cleaning
+desc,data cleaning
+describeBy,data cleaning
+detach,setup
+detectCores,setup
+dev.off,visualization
+devtools,setup
+df,import
+df_tassize_subset,data cleaning
+diag,modeling
+diff,data cleaning
+difftime,data cleaning
+dim,exploratory
+dimnames,data cleaning
+dir,import
+dir.create,setup
+dir.exists,setup
+dirname,setup
+dispersiontest,modeling
+displ,data cleaning
+display,visualization
+dist,visualization
+distinct,data cleaning
+dlnorm,modeling
+dlply,data cleaning
+dmvnorm,modeling
+dmy,data cleaning
+do,data cleaning
+do.call,data cleaning
+DocumentTermMatrix,modeling
+domain,setup
+doParallel,setup
+doPcaPlots,visualization
+dotplot,visualization
+double,import
+download.file,import
+downloadGSMbedFiles,import
+dplyr,data cleaning
+dpval,data cleaning
+drake_config,modeling
+drake_plan,data cleaning
+dredge,modeling
+drive_analysis,communication
+drive_auth,setup
+drive_ls,evaluation
+drive_mkdir,evaluation
+drive_rm,evaluation
+droplevels,data cleaning
+dSigTransform,exploratory
+DT,setup
+dunn.test,modeling
+duplicated,data cleaning
+dx.wts,evaluation
+dygraph,visualization
+dyLegend,visualization
+dyRangeSelector,visualization
+dySeries,visualization
+E,visualization
+edgeRenderInfo,visualization
+element_blank,visualization
+element_line,visualization
+element_rect,visualization
+element_text,visualization
+empirical_logit,modeling
+emplog,exploratory
+enrichAnnoOverlap,data cleaning
+enrichMap,visualization
+enrichPathway,modeling
+enrichPeakOverlap,evaluation
+epi.2by2,exploratory
+EpiModelHPC,import
+escalc,data cleaning
+estimate_pars,data cleaning
+ET.HargreavesSamani,data cleaning
+eval,evaluation
+evaluate_plan,evaluation
+everything,data cleaning
+exists,data cleaning
+exp,evaluation
+expand_limits,visualization
+expand_runs,data cleaning
+expand_surveys,setup
+expand.grid,data cleaning
+explain.var,visualization
+expose_imports,setup
+expression,visualization
+ExpressionSet,import
+exprs,data cleaning
+extract,data cleaning
+extract_tables,setup
+extract2,data cleaning
+fa,exploratory
+fa.parallel,exploratory
+facet_grid,visualization
+facet_wrap,visualization
+facet_zoom,visualization
+factor,data cleaning
+Factor,data cleaning
+fct_inorder,data cleaning
+fct_recode,visualization
+fct_reorder,visualization
+fct_rev,visualization
+fData,data cleaning
+featureNames,data cleaning
+file,export
+File,export
+file_in,data cleaning
+file_out,communication
+file.copy,export
+file.create,setup
+file.exists,setup
+file.mtime,data cleaning
+file.path,setup
+file.rename,data cleaning
+file.size,import
+FillInData,setup
+filter,data cleaning
+Filter,data cleaning
+find_concurrent_events,data cleaning
+find_mistracked_trials,data cleaning
+find_ND,data cleaning
+find_root,setup
+find_statio_diffs,data cleaning
+findInterval,evaluation
+first,communication
+fisher.test,modeling
+fit,modeling
+fit_psycho,modeling
+fit.clust,modeling
+fitted,evaluation
+fixef,evaluation
+flog.appender,setup
+flog.info,communication
+floor,data cleaning
+fluidPage,setup
+fluidRow,communication
+fn,modeling
+fn_gsea,setup
+fn_iha_7q10,export
+fn_iha_mlf,export
+fn_run_gsea,setup
+follow_rec,data cleaning
+foo,modeling
+for,data cleaning
+forcats,visualization
+foreach,setup
+forest,modeling
+format,data cleaning
+formula,modeling
+fortify,setup
+fp,modeling
+fpkm_annotations,modeling
+fread,import
+freeR,exploratory
+fromJSON,data cleaning
+fst,export
+Fstats,modeling
+FTL_cp,import
+FTL_tripTable,import
+full_join,data cleaning
+fun,evaluation
+function,data cleaning
+funnel,evaluation
+funWrap,data cleaning
+future_map_dfr,setup
+fwrite,export
+fzCor,exploratory
+g1,visualization
+g2,visualization
+g3,visualization
+g4,visualization
+gam,modeling
+gam.check,evaluation
+gArea,data cleaning
+gather,data cleaning
+gather_plan,data cleaning
+gaussian,modeling
+GaussKernel,modeling
+gbm.fit,modeling
+gc,setup
+gContains,data cleaning
+gdpRank,exploratory
+geneSelect,export
+genesInTerm,data cleaning
+GenTable,evaluation
+geo,import
+geom_abline,visualization
+geom_area,visualization
+geom_bar,visualization
+geom_boxplot,visualization
+geom_col,visualization
+geom_density,visualization
+geom_errorbar,visualization
+geom_histogram,visualization
+geom_hline,visualization
+geom_jitter,visualization
+geom_label,communication
+geom_line,visualization
+geom_path,visualization
+geom_point,visualization
+geom_pointrange,visualization
+geom_polygon,visualization
+geom_raster,visualization
+geom_rect,visualization
+geom_ribbon,visualization
+geom_rug,visualization
+geom_segment,visualization
+geom_smooth,visualization
+geom_text,visualization
+geom_text_repel,visualization
+geom_tile,visualization
+geom_violin,visualization
+geom_vline,visualization
+get,import
+GET,export
+get_data_path,setup
+get_epi,import
+get_event_group,data cleaning
+get_experiment_names,data cleaning
+get_parallel_cores_given_os,setup
+get_param,import
+get_parsed_binary_confusion_matrix_stats,evaluation
+get_prop,data cleaning
+get_raw_data_ts,import
+get_shared_2,data cleaning
+get_shared_all,data cleaning
+get.com.preprocess.run.multiseq.ATACseq,visualization
+get.correctness,data cleaning
+get.data,data cleaning
+get.pval.from.empirical.null.dist.discrete,evaluation
+get.results,data cleaning
+getBM,export
+getCCLE_MetaGenomics,import
+getCcleExpressionData,import
+getCtrpScreensAsMatrix,import
+getData,import
+getFiledata,import
+getGenes,import
+getGEOInfo,data cleaning
+getmode,exploratory
+getMSSMprocessedMutationCalls,import
+getOption,setup
+getProbeGeneList,exploratory
+getPromoters,data cleaning
+getRecalculatedAUCMatrix,data cleaning
+getRes,data cleaning
+getSamplesForDisease,data cleaning
+getSanger_MetaGenomics,import
+getSig,setup
+getTagMatrix,data cleaning
+getTissueType,data cleaning
+getType,exploratory
+getUniqueFiles,import
+getValueForAllCells,data cleaning
+getwd,setup
+getWordListEntropy,setup
+gg0,visualization
+gg1,visualization
+ggbiplot,visualization
+ggplot,visualization
+ggplot_build,visualization
+ggplot_gtable,visualization
+ggplot2,visualization
+ggplotly,visualization
+ggroc,visualization
+ggsave,export
+ggtitle,visualization
+gIntersection,export
+glht,evaluation
+glimpse,exploratory
+glm,modeling
+glm.nb,modeling
+glmer,modeling
+glmerControl,modeling
+glmpath,modeling
+glPca,modeling
+gls,modeling
+glue,setup
+glue_data,communication
+googledrive,evaluation
+graph_from_adjacency_matrix,modeling
+graph.adjacency,modeling
+graphRenderInfo,visualization
+grep,data cleaning
+grepl,data cleaning
+grid.arrange,visualization
+grid.draw,visualization
+grid.text,visualization
+group_by,data cleaning
+group2,export
+groupMatch,data cleaning
+groupRankAverages,exploratory
+GSA.read.gmt,import
+GSEA,setup
+GSM1003578,communication
+gsmFind,modeling
+gsub,data cleaning
+guide_legend,visualization
+guides,export
+gzfile,import
+has_file,setup
+hcb,modeling
+hcb_adults,communication
+hcb_adults_feelings,exploratory
+hcb_adults_hunger,exploratory
+hcb_adults_thinking,exploratory
+hcb_children,visualization
+hcb_children_feelings,visualization
+hcb_children_hunger,visualization
+hcb_children_thinking,visualization
+hcb_feelings,exploratory
+hcb_hunger,exploratory
+hcb_thinking,exploratory
+hclus.scree,visualization
+hclust,visualization
+hdi,modeling
+head,exploratory
+heatmap.2,data cleaning
+here,setup
+hetcor,exploratory
+hist,visualization
+hja.map,visualization
+hr,communication
+html_document,export
+htmlOutput,setup
+humanize_classification,data cleaning
+humanize_metaprogramming,data cleaning
+humanReadable,import
+hyper_tibble,data cleaning
+I,visualization
+iconv,data cleaning
+idMatches,exploratory
+if,setup
+if_else,visualization
+ifelse,data cleaning
+image,exploratory
+imap_dfr,visualization
+import,import
+importance,communication
+indNames,data cleaning
+induced_subgraph,visualization
+inner_join,data cleaning
+install_github,setup
+install.packages,setup
+installed.packages,setup
+interaction,visualization
+interaction.plot,visualization
+intersect,data cleaning
+intersectList,data cleaning
+invisible,setup
+IPW,evaluation
+IPWt50,evaluation
+is_exprs,evaluation
+is.element,data cleaning
+is.factor,data cleaning
+is.infinite,exploratory
+is.na,data cleaning
+is.null,data cleaning
+is.numeric,data cleaning
+isPackageInstalled,setup
+isPackageLoaded,setup
+italic,visualization
+itchmodel,export
+jags,modeling
+join,data cleaning
+jpeg,data cleaning
+kde2d,data cleaning
+keggPathwayGraphs,communication
+keggPathwayNames,exploratory
+kmeans,evaluation
+knit,communication
+knit2html,communication
+knitr,communication
+knitr_in,communication
+knitr::opts_chunk,communication
+knn,modeling
+kruskal,modeling
+kruskal.test,modeling
+l_ply,setup
+labeller,visualization
+labels,visualization
+labels2colors,visualization
+labs,visualization
+lag,data cleaning
+lapply,data cleaning
+last,data cleaning
+last_plot,visualization
+latex,export
+latlon2county,data cleaning
+layout,data cleaning
+layout.circle,evaluation
+layoutGraph,visualization
+ldply,data cleaning
+left_join,data cleaning
+legend,visualization
+len,data cleaning
+len_weight,data cleaning
+length,data cleaning
+levels,data cleaning
+library,setup
+lims,visualization
+Line,data cleaning
+lines,visualization
+Lines,data cleaning
+list,data cleaning
+list.dirs,import
+list.files,setup
+list2ascii,data cleaning
+Literal,data cleaning
+lm,modeling
+lme,exploratory
+lmer,modeling
+lmList,modeling
+load,import
+load_all,import
+load_data,import
+loadCounts,import
+loadData,import
+loadProject,visualization
+loess,modeling
+log,visualization
+log10,visualization
+log2,modeling
+logical,evaluation
+login,modeling
+logSumExp,modeling
+long_hr_sim,evaluation
+ls,setup
+lsf.str,data cleaning
+lubridate,data cleaning
+m1,evaluation
+m2,data cleaning
+m3,data cleaning
+mad,modeling
+main,setup
+mainPanel,communication
+make,evaluation
+make_grid,exploratory
+make_model_data,modeling
+make_model_name,data cleaning
+make_visual,visualization
+make_visual_PID,data cleaning
+make.names,data cleaning
+MakeBetterEventTable,import
+makeCluster,modeling
+makeDissimByPredicate,data cleaning
+manova,exploratory
+map,data cleaning
+map_chr,data cleaning
+map_dbl,data cleaning
+map_dfr,visualization
+map_lgl,modeling
+map2,modeling
+map2_chr,data cleaning
+map2_dbl,modeling
+mapply,data cleaning
+mapvalues,data cleaning
+match,data cleaning
+matches,setup
+matching_cases,exploratory
+matrix,data cleaning
+matrixStats,data cleaning
+max,exploratory
+mclapply,modeling
+mcmc,evaluation
+mcp,evaluation
+MCplotter,visualization
+mds,modeling
+mds_Aordinal,exploratory
+mds_feelings_Aordinal,exploratory
+mds_hunger_Aordinal,modeling
+mds_thinking_Aordinal,evaluation
+mds.sol,evaluation
+mean,data cleaning
+mean.circular,data cleaning
+median,data cleaning
+melt,data cleaning
+memoise,import
+memoReg,data cleaning
+merge,data cleaning
+message,communication
+MH.plot,visualization
+mice,data cleaning
+microglialException,setup
+min,exploratory
+min.max.model,modeling
+model_run,setup
+model.matrix,modeling
+month,data cleaning
+moving_average,exploratory
+mtext,visualization
+multiplot,visualization
+multiplot_mod,visualization
+mutate,data cleaning
+muted,import
+mvrnorm,setup
+myCenter,evaluation
+myglm,modeling
+MySQL,import
+n,data cleaning
+n_distinct,data cleaning
+na.omit,data cleaning
+names,data cleaning
+navbarMenu,communication
+navbarPage,communication
+nc_open,import
+nchar,data cleaning
+ncol,data cleaning
+NCOL,data cleaning
+ncvar_add,data cleaning
+ncvar_def,data cleaning
+ncvar_get,data cleaning
+ncvar_put,data cleaning
+nest,modeling
+new,data cleaning
+new.env,setup
+newbinplot,evaluation
+newCountDataSet,data cleaning
+newSCESet,exploratory
+next,data cleaning
+nodeRenderInfo,visualization
+normal,import
+normalize,import
+normalize_medu,exploratory
+normalizePath,setup
+nPop,exploratory
+npyLoad,modeling
+nrow,data cleaning
+NROW,data cleaning
+NTS,modeling
+num_id_matches,exploratory
+numeric,evaluation
+numericInput,setup
+object.size,exploratory
+ogbox,data cleaning
+one_of,modeling
+oneway.test,data cleaning
+OptionParser,modeling
+options,setup
+or_table,communication
+order,data cleaning
+ordered,data cleaning
+ordiellipse,visualization
+osfr,import
+output_url,import
+p,visualization
+p_install_gh,setup
+p_load,setup
+p.adjust,modeling
+p1,visualization
+packageVersion,setup
+pacman,setup
+pairs,exploratory
+pairscor.fnc,exploratory
+pandoc,export
+par,visualization
+parallel,setup
+parameterBounds,setup
+parameterizedRandomizationDistribution,modeling
+parse,evaluation
+parse_args,modeling
+parse.gctx,import
+ParseConfig,setup
+participation_plots,visualization
+past,data cleaning
+paste,data cleaning
+Paste,data cleaning
+paste0,data cleaning
+path_file,import
+path.expand,setup
+pb,data cleaning
+pbd_Bayes,modeling
+pbd_ML,evaluation
+pca_A2,evaluation
+pca_A2_rot,evaluation
+pchisq,evaluation
+pctiles_vitd,exploratory
+pData,data cleaning
+pdf,export
+pe,exploratory
+peak,data cleaning
+peak1,export
+peakHeatmap,visualization
+peEdgeRenderInfo,visualization
+peNodeRenderInfo,visualization
+Percent,data cleaning
+performance,modeling
+perl,exploratory
+pf,evaluation
+pgas,import
+pheatmap,visualization
+pkgconfig,setup
+plasma,setup
+plm,modeling
+plm.data,data cleaning
+plot,visualization
+plot_cp,visualization
+plot_grid,visualization
+plot_india,exploratory
+plot_prop,visualization
+plot_raw,visualization
+plot_us,visualization
+plot.clust,visualization
+plot.goterm,visualization
+plot.gtex.top2pcs,exploratory
+plot.wp,visualization
+plot3dHairballs,visualization
+plot3dProbe,evaluation
+plotAnnoBar,visualization
+plotAnnoPie,visualization
+plotAvgProf,visualization
+plotDendroAndColors,visualization
+plotDistToTSS,visualization
+plotExpression,visualization
+plotHighestExprs,visualization
+plotlyOutput,communication
+plotmeans,exploratory
+plotMetadata,communication
+plotOutput,communication
+plotPCA,visualization
+plotQC,visualization
+plotVioBox,visualization
+plyr,data cleaning
+pmap,communication
+pmax,data cleaning
+pmean,visualization
+png,export
+points,visualization
+poisson,modeling
+poisson.test,evaluation
+Polygon,data cleaning
+Polygons,data cleaning
+position_dodge,visualization
+position_jitterdodge,visualization
+position_stack,visualization
+possibly,modeling
+posterior_samples,evaluation
+posterior.mode,evaluation
+postscript,export
+PPTA.analysis,modeling
+PPTA.design,modeling
+praw,visualization
+prcomp,modeling
+pred,evaluation
+pred1,evaluation
+predict,modeling
+predict.glm,modeling
+prediction,modeling
+predRE,modeling
+prepareGS,data cleaning
+prepVars,modeling
+pretty,visualization
+prho,visualization
+prho2,communication
+prhouni,visualization
+prhounisim,evaluation
+principal,modeling
+print,communication
+print_plot_basic,visualization
+problem.site,exploratory
+pROC,evaluation
+proc.time,modeling
+progress::progress_bar,data cleaning
+proj4string,data cleaning
+projection,modeling
+prop.table,setup
+ptrack,visualization
+ptukey,evaluation
+pull,evaluation
+puristOut,export
+purrr,data cleaning
+pvpick,data cleaning
+pwr.t.test,modeling
+pwra,visualization
+q,evaluation
+q_fun,evaluation
+qnorm,modeling
+qplot,visualization
+qqline,evaluation
+qqnorm,evaluation
+qqplot,visualization
+qt,data cleaning
+quantile,data cleaning
+quantile_table,evaluation
+quantileCut,data cleaning
+quartz,communication
+quasipoisson,modeling
+quickpsy,modeling
+quickreadfiles,import
+qvalue,exploratory
+radfit,modeling
+radFullToDegFull,data cleaning
+radioButtons,setup
+radlattice,visualization
+rainbow,visualization
+randomForest,modeling
+range,visualization
+rank,exploratory
+ranNorm,evaluation
+raster,data cleaning
+rayleigh.test,data cleaning
+rbeta,visualization
+rbind,data cleaning
+rbind.data.frame,data cleaning
+rbind.fill,data cleaning
+rbindlist,modeling
+rbinom,data cleaning
+RC.brayplot,visualization
+rchisq,data cleaning
+read_and_interpolate,data cleaning
+read_compare_var_res,import
+read_csv,import
+read_delim,data cleaning
+read_dir,import
+read_excel,import
+read_fst,import
+read_graph,import
+read_rds,import
+read_sav,import
+read_table2,import
+read_tsv,import
+read_ufo,data cleaning
+read_xml,export
+read.BPBD,import
+read.counts.and.data,import
+read.csv,import
+read.delim,import
+read.design,import
+read.dir,import
+read.DNase.data,import
+read.dta,import
+read.egt,import
+read.exp,import
+read.gtex.data,import
+read.table,import
+read.xls,import
+read.xlsx,import
+readBigMet,import
+ReadColumnViaPipe,import
+readCufflinks,import
+readFastq,import
+readGDAL,setup
+readHrResults,import
+ReadInputs,import
+readLines,import
+readMappings,import
+ReadMouseLog,setup
+readNWISdv,import
+readOGR,import
+readPeakFile,import
+readr,import
+readRDS,import
+recode,data cleaning
+recode_factor,data cleaning
+rect,communication
+rect.hclust,visualization
+Reduce,data cleaning
+reducedDims,modeling
+regexMerge,data cleaning
+registerDoMC,setup
+registerDoParallel,setup
+registerDoSEQ,setup
+rel,visualization
+remef,modeling
+remove,data cleaning
+remove.sites,data cleaning
+rename,data cleaning
+render,export
+renderGraph,visualization
+reorder,visualization
+rep,data cleaning
+replace,data cleaning
+replaceElement,data cleaning
+replicate,export
+replotFeatures,visualization
+Report,export
+require,setup
+requireNamespace,import
+rescale,visualization
+reshape,data cleaning
+reshape2,data cleaning
+resid,modeling
+resid_panel,modeling
+residuals,evaluation
+return,data cleaning
+rev,visualization
+revalue,data cleaning
+rexp,data cleaning
+rf_model,evaluation
+rgb,visualization
+rgcam,visualization
+rho.circular,data cleaning
+RIG.theme,visualization
+right_join,data cleaning
+rm,setup
+rm.null,import
+rma,modeling
+rma.mv,modeling
+rmarkdown,export
+Rmisc,evaluation
+RMS,modeling
+rmvnorm,modeling
+RMySQL,import
+rn,data cleaning
+rna_count_matrix,data cleaning
+rna_fpkm_matrix,modeling
+rnaCoexist,modeling
+rnaGencodeKallistoMatrix,import
+rnaSeqTresh,data cleaning
+rnb.getOption,data cleaning
+rnb.initialize.reports,communication
+rnb.options,data cleaning
+rnb.run.qc,modeling
+rnb.sample.groups,data cleaning
+rnb.sample.replicates,data cleaning
+RnBeadSet,evaluation
+rnorm,data cleaning
+roc,modeling
+roll_mean_matrix,modeling
+rotateSelect,data cleaning
+round,data cleaning
+row.names,data cleaning
+rowMeans,data cleaning
+rownames,data cleaning
+rowSums,data cleaning
+rowVars,data cleaning
+rprojroot,setup
+rq,modeling
+rstan_options,setup
+run_glm,data cleaning
+run_hector_emissions,modeling
+run.wilcox,data cleaning
+runAnalysisTrial,modeling
+runDrugAnalysis,import
+runif,exploratory
+runMarkdown,communication
+runPCA,data cleaning
+runTest,modeling
+s,modeling
+samp.ia,exploratory
+sample,data cleaning
+sample_frac,data cleaning
+sample_n,data cleaning
+sample_sizes,communication
+sampleNames,data cleaning
+SampleSites,export
+sampling,modeling
+sapply,data cleaning
+save,export
+save_plot,export
+save.image,export
+saveRDS,export
+scale,data cleaning
+scale_color_brewer,visualization
+scale_color_discrete,visualization
+scale_color_gradient,visualization
+scale_color_gradient2,visualization
+scale_color_manual,visualization
+scale_color_viridis,visualization
+scale_color_viridis_c,visualization
+scale_colour_brewer,visualization
+scale_colour_discrete,visualization
+scale_colour_gradientn,visualization
+scale_fill_brewer,visualization
+scale_fill_discrete,visualization
+scale_fill_gdocs,visualization
+scale_fill_gradient,visualization
+scale_fill_manual,visualization
+scale_linetype_manual,visualization
+scale_shape_manual,visualization
+scale_x_continuous,visualization
+scale_x_discrete,visualization
+scale_x_log10,visualization
+scale_y_continuous,visualization
+scale_y_discrete,visualization
+scale_y_log10,visualization
+scale_y_reverse,visualization
+scan,import
+scores,visualization
+sd,exploratory
+search,setup
+sec_axis,visualization
+select,data cleaning
+select_if,data cleaning
+selectInput,communication
+self,setup
+semi_join,data cleaning
+sen,modeling
+send,communication
+send.mail,communication
+Sensitivity_Analysis,modeling
+separate,data cleaning
+sepExpr,setup
+seq,visualization
+seq_len,communication
+seq2gene,data cleaning
+sessionInfo,setup
+set,communication
+set_config,setup
+set.seed,setup
+setdiff,setup
+setDT,evaluation
+setEdgeWeights,modeling
+setEPS,setup
+setkey,data cleaning
+setMKLthreads,export
+setnames,data cleaning
+setNames,data cleaning
+setNodeWeights,exploratory
+setPars,data cleaning
+setwd,setup
+shapiro.test,modeling
+shinyApp,setup
+shinyDirButton,setup
+shinyUI,setup
+sidebarLayout,communication
+sidebarPanel,communication
+sign,evaluation
+signif,data cleaning
+signifMarker,data cleaning
+sim,modeling
+sim_abundance,exploratory
+sim_ays_covar,exploratory
+sim_distribution,exploratory
+sim_logistic,modeling
+sim_parabola,exploratory
+sim_R,exploratory
+sim_survey_parallel,modeling
+sim_vonB,exploratory
+sim_Z,exploratory
+sim.bd.age,setup
+simplify2array,exploratory
+sink,export
+skewness,modeling
+slice,exploratory
+sliderInput,setup
+slope,exploratory
+solve,modeling
+sort,data cleaning
+source,setup
+sourceCpp,import
+sourceDirectory,setup
+spantree,data cleaning
+SpatialLines,data cleaning
+SpatialLinesDataFrame,data cleaning
+SpatialPoints,data cleaning
+SpatialPointsDataFrame,data cleaning
+SpatialPolygons,data cleaning
+SpatialPolygonsDataFrame,data cleaning
+spec,modeling
+split,data cleaning
+split_data,data cleaning
+spread,data cleaning
+sprintf,communication
+spTransform,data cleaning
+sql,import
+sqldf,data cleaning
+sqrt,modeling
+sread,exploratory
+stack_models,exploratory
+stan,modeling
+stan_glm,import
+stan_model,modeling
+standard_model_pipeline,modeling
+standardizeGeneSymbols,data cleaning
+starts_with,data cleaning
+stat_bin,visualization
+stat_binhex,visualization
+stat_boxplot,visualization
+stat_density,visualization
+stat_density2d,visualization
+stat_function,visualization
+stat_smooth,visualization
+stat_summary,visualization
+stats,exploratory
+stepAIC,modeling
+stop,setup
+stopCluster,setup
+stopifnot,data cleaning
+stopwords,data cleaning
+store,data cleaning
+str,exploratory
+str_detect,data cleaning
+str_extract,data cleaning
+str_pad,data cleaning
+str_remove,data cleaning
+str_replace,data cleaning
+str_replace_all,data cleaning
+str_split,data cleaning
+str_sub,data cleaning
+str_to_lower,data cleaning
+str_to_title,data cleaning
+str_trim,data cleaning
+strat.fun,export
+stringr,data cleaning
+strptime,setup
+strsplit,data cleaning
+structure,data cleaning
+su_vitd,exploratory
+sub,data cleaning
+subset,data cleaning
+substitute,data cleaning
+substr,data cleaning
+substring,data cleaning
+sum,exploratory
+summarise,data cleaning
+summarize,data cleaning
+summarize_all,evaluation
+summarize_at,evaluation
+SummarizedExperiment,data cleaning
+summary,exploratory
+Summary,exploratory
+summary_samples,evaluation
+summaryBy,setup
+summarySE,modeling
+suppressMessages,setup
+suppressPackageStartupMessages,setup
+suppressWarnings,visualization
+surv_plot,evaluation
+survfit,modeling
+survivalAnalysisByExpression,exploratory
+survivalAnalysisByMutation,exploratory
+survivalAnalysisByMutationAndExpression,data cleaning
+svg,export
+svgPlotGG,export
+svydesign,modeling
+svyglm,modeling
+sweep,data cleaning
+switch,import
+syn,import
+"syn$tableQuery(""SELECT sampleIdentifier,Patient,TumorLocation,RNASeq FROM syn5556216 where usedforRNA=TRUE"")",data cleaning
+synapse,data cleaning
+Synapse,data cleaning
+synapseLogin,setup
+synapseQuery,import
+synapser,data cleaning
+synDelete,import
+synGet,import
+synLogin,setup
+synStore,export
+synTableQuery,import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study  FROM syn13363852 WHERE ( ( \""assay\"" = 'rnaSeq' ) AND ( \""fileFormat\"" = 'sf' ) )"")",import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn11614207 WHERE ( ( \""assay\"" = 'rnaSeq' ) )"")",import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn9702734 WHERE ( ( \""parentId\"" = 'syn5493036' ) AND ( \""assay\"" = 'rnaSeq' ) AND ( \""individualID\"" IS NOT NULL ) )"")",import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis  FROM syn13363852 WHERE ( ( \""assay\"" = 'rnaSeq' ) AND ( \""fileFormat\"" = 'sf' ) )"")",import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis FROM syn8518944 WHERE ( ( \""assay\"" = 'rnaSeq' ) ) and fileFormat='tsv' and isMultiSpecimen is NULL and name like '%gencode%'"")",import
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis FROM syn9702734 WHERE ( ( \""parentId\"" = 'syn5493036' ) AND ( \""assay\"" = 'rnaSeq' ) AND ( \""individualID\"" IS NOT NULL ) )"")",import
+Sys.Date,export
+sys.frame,setup
+Sys.getenv,setup
+Sys.getpid,setup
+Sys.time,communication
+system,setup
+system.file,import
+t,data cleaning
+t_out,evaluation
+t.test,exploratory
+table,exploratory
+tableOutput,communication
+tables,export
+tabPanel,communication
+tabsetPanel,setup
+tabular,data cleaning
+tagHeatmap,visualization
+tags,setup
+tail,communication
+tamoxifen,exploratory
+tapply,data cleaning
+tbl,import
+tbl_df,data cleaning
+tbl_dt,data cleaning
+Term,export
+test_surveys,modeling
+testit,setup
+text,visualization
+textcat,data cleaning
+textOutput,setup
+theme,visualization
+theme_apa,setup
+theme_bw,visualization
+theme_classic,visualization
+theme_cowplot,visualization
+theme_dark,visualization
+theme_get,visualization
+theme_light,visualization
+theme_minimal,visualization
+theme_pander,visualization
+theme_set,setup
+theme_update,visualization
+threshold,data cleaning
+tibble,data cleaning
+tick,data cleaning
+tidy,modeling
+tidy_beta,data cleaning
+tidync,data cleaning
+tidyr,data cleaning
+tiff,export
+tikz,visualization
+tikzDevice,visualization
+time.taken,evaluation
+timeout,export
+title,visualization
+titlePanel,setup
+tm_map,data cleaning
+tn,modeling
+toColor,visualization
+today,communication
+tolower,data cleaning
+top_n,data cleaning
+topicize,data cleaning
+TOSTtwo.raw,modeling
+totalerrorToDegSemi,data cleaning
+tp,modeling
+tpm,visualization
+tpt,visualization
+tptop,visualization
+train,modeling
+train_gbm_classifier,modeling
+train_stacked_model,modeling
+trainControl,modeling
+transf.ipft,visualization
+transform,data cleaning
+translatePublishable,data cleaning
+TreeCmp.Read,modeling
+trial_counts,communication
+trim,data cleaning
+trimws,data cleaning
+try,setup
+ts,exploratory
+tsdisplay,exploratory
+TukeyHSD,modeling
+tune.svm3,evaluation
+tx_prev,communication
+typeof,exploratory
+ungroup,data cleaning
+uni_models_list,evaluation
+union,data cleaning
+unique,data cleaning
+unit,visualization
+unlink,setup
+unlist,data cleaning
+unname,data cleaning
+unzip,import
+update,modeling
+upper.tri,exploratory
+upsetplot,visualization
+ur.df,evaluation
+useMart,import
+V,modeling
+VAR,evaluation
+vargha.delaney,communication
+variable_freq_by_n,modeling
+varIdent,modeling
+varImpPlot,visualization
+vars,evaluation
+vars_select,data cleaning
+VARselect,evaluation
+vb,modeling
+vcov,setup
+vector,setup
+vegdist,setup
+vennpie,visualization
+vennplot,data cleaning
+verify_output_dirs,export
+View,exploratory
+viewport,setup
+vif,evaluation
+vioplot,visualization
+viridis,visualization
+viridisLite,setup
+voom,import
+VSS,exploratory
+vsurf_bb,export
+walk,setup
+warning,setup
+warnings,evaluation
+wd,data cleaning
+wday,exploratory
+week,data cleaning
+wes_palette,visualization
+wesanderson,visualization
+wetland.hydrology,data cleaning
+which,data cleaning
+which.min,evaluation
+while,evaluation
+width,exploratory
+wilcox.test,modeling
+window,exploratory
+windows,setup
+with,visualization
+wordcloud,visualization
+wr,data cleaning
+write,export
+write_bib,communication
+write_csv,export
+write_fst,export
+write_rds,export
+write.csv,export
+write.table,export
+write.tree,export
+write.xlsx,export
+writeRaster,export
+x,modeling
+x11,setup
+xlab,visualization
+xlim,visualization
+xml_find_all,export
+xml_text,export
+xml2,export
+xtable,communication
+xyplot,visualization
+y_bmt,exploratory
+yaml.load_file,import
+year,data cleaning
+yhat.deploy,modeling
+yhat.predict,modeling
+yhat.svm.result,modeling
+ylab,visualization
+ylim,visualization
+zapsmall,communication
