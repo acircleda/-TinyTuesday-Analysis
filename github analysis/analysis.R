@@ -4,7 +4,7 @@ library(tidyverse)
 library(ggplot2)
 library(tidycode)
 library(ggtext)
-load("tidy-tuesday_data.Rdata")
+load("github analysis/tidy-tuesday_data.Rdata")
 
 #prep raw data ----
 # load("db-tmp/cleaned database.RData")
@@ -101,6 +101,18 @@ func_example("setup")
 
 ##anti-join
 
+## raw number of functions per contribution ----
+github_data %>% 
+  filter(username != "jkaupp") %>%
+  group_by(tweet_num, classification) %>%
+  count() %>%
+  ggplot()+
+  xlab("Tweet Number")+
+  ylab("Raw Number of Functions")+
+  geom_bar(aes(x=tweet_num, y=n, fill=classification), stat="identity")+
+  scale_fill_viridis_d(option = "magma", na.value = "grey50")+
+  theme(panel.background = element_blank())
+
 ## average number of functions per contribution ----
 github_data %>% 
   filter(username != "jkaupp") %>%
@@ -153,8 +165,11 @@ github_data %>%
   group_by(tweet_num, classification) %>%
   summarize(mean = mean(n))%>%
   ggplot()+
+  xlab("Tweet Number")+
+  ylab("Average Number of Functions")+
   geom_bar(aes(x=tweet_num, y=mean, fill=classification), stat="identity", position=position_fill())+
   scale_fill_viridis_d(option = "magma")
+
 
 github_data %>% 
   filter(username != "jkaupp") %>%
