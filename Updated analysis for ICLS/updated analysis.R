@@ -45,9 +45,11 @@ filtered_twitter_data <- twitter_data %>%
   unnest_wider(ext_media_url, names_sep = "_") %>%
   janitor::clean_names() %>%
   mutate(profile = paste0("http://www.twitter.com/", screen_name)) %>%
-  select(screen_name, profile, created_at, year, week, year_week, text, ext_media_url_1, ext_media_url_2, ext_media_url_3, ext_media_url_4, status_id)
+  group_by(screen_name) %>%
+  mutate(tweet_number = row_number()) %>%
+  select(screen_name, profile, tweet_number, created_at, year, week, year_week, text, ext_media_url_1, ext_media_url_2, ext_media_url_3, ext_media_url_4, status_id)
   
-write.csv(filtered_twitter_data, file="Tidy Tuesday Participants.csv")
+write.csv(filtered_twitter_data, file="Updated analysis for ICLS/Tidy Tuesday Participants.csv")
 
 
 # Questions we discussed ----
