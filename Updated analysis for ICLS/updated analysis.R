@@ -42,18 +42,12 @@ filtered_twitter_data <- twitter_data %>%
   mutate(week = week(created_at),
          year_week = paste0(year, " ", week)) %>%
   ungroup() %>%
-  mutate(ext_media_url = str_remove(ext_media_url, 'c\\("'),
-         ext_media_url = str_remove(ext_media_url, '"'),
-         profile = paste0("http://www.twitter.com/", screen_name)) %>%
-  separate(ext_media_url, sep = ",",
-           into = paste0("media_", 1:4)) %>%
-  select(screen_name, profile, created_at, year, week, year_week, text, media_1, media_2, media_3, media_4, status_id)
+  unnest_wider(ext_media_url, names_sep = "_") %>%
+  janitor::clean_names() %>%
+  mutate(profile = paste0("http://www.twitter.com/", screen_name)) %>%
+  select(screen_name, profile, created_at, year, week, year_week, text, ext_media_url_1, ext_media_url_2, ext_media_url_3, ext_media_url_4, status_id)
   
-
-filtered_twitter_data$ext_media_url %>%
-  str_count(pattern = ",") %>% 
-  max()
-
+write.csv(filtered_twitter_data, file="Tidy Tuesday Participants.csv")
 
 
 # Questions we discussed ----
