@@ -51,27 +51,55 @@ filtered_twitter_data <- twitter_data %>%
   
 write.csv(filtered_twitter_data, file="Updated analysis for ICLS/Tidy Tuesday Participants.csv")
 
+# get list of participants we chose for inclusion
+selected_participants <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1uEbxH83Ww-AJtZl4M_XJubbqg9P_nRyhlVOwf5bcJOQ/edit#gid=1191274417") %>%
+  filter(`Include?` == "Include") %>%
+  filter(`Agree to Participate` == "Agree") %>%
+  select(screen_name)
 
-# Questions we discussed ----
 
-# How much code are you sharing?
-# Sophistication of code?
-  # Tidycode
-  # Code Linting
-# Visualizations
-  # Create an app for rating in Shiny
-    # Repurpose existing app?
-    # Tidycode classifier?
-  # Permission required
-  # Choose most representative
-  # Criteria of judgement
-  # inlcusion criteria
-  # sustained number of weeks ~ 6 months
-# Survey
+# get files ready for dl
+participant_images <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1uEbxH83Ww-AJtZl4M_XJubbqg9P_nRyhlVOwf5bcJOQ/edit#gid=821913014") %>%
+  filter(screen_name %in% selected_participants$screen_name) %>%
+  select(screen_name, tweet_number:week, ext_media_url_1:status_id) %>%
+  group_by(screen_name) %>%
+  pivot_longer(ext_media_url_1:ext_media_url_4,
+               names_to="media", values_to="url") %>%
+  drop_na(url) %>%
+  mutate(
+    filename=paste0("survey/images/", screen_name, "-", tweet_number, "-", basename(url)),
+    stat = case_when(
+      tweet_number == 1 ~"1",
+      tweet_number == 2 ~"2",
+      tweet_number == round(median(tweet_number), digits=0)-1 ~"3",
+      tweet_number == round(median(tweet_number), digits=0) ~"4",
+      tweet_number == max(tweet_number)-1 ~ "5",
+      tweet_number == max(tweet_number) ~ "6"
+    )) %>%
+  drop_na(stat)
 
-# Tasks
-  # IDing sample of participants - Micahel / Anthony
-  # Criteria of judgement of visualizations - Josh
-    # Epistemic considerations
-  # Shiny App - ?
+sample <- participant_images
+
+# download images
+
+# for (i in 1:length(sample$url)){
+#   download.file(sample$url[i], destfile =  sample$filename[i], mode = 'wb')
+# }
+# 
+# # if interrupted or other error:
+# `%notin%` <- Negate(`%in%`)
+# file_list <- data.frame(files = list.files())
+# 
+# remain <- selected_participants %>%
+#   filter(filename %notin% file_list$files)
+
+for (i in 1:length(sample$url)){
   
+  skip_to_next <- FALSE
+  
+  tryCatch(
+  download.file(sample$url[i], destfile =  sample$filename[i], mode = 'wb'), error = function(e) { skip_to_next <<- TRUE})
+  
+  if(skip_to_next) { next }     
+}
+
