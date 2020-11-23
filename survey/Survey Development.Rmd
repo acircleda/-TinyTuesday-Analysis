@@ -74,6 +74,7 @@ write.csv(filtered_twitter_data, file="Updated analysis for ICLS/Tidy Tuesday Pa
 
 Finally, participants chosen for inclusion were contacted for permission to use their contributions in our survey. Twenty-one participants agreed to allow us to include their contributions in the survey. For those who agreed, the tweet archive was filtered to contain only those users. The first two, middle two, and final two tweets in the archive for each user were then downloaded to include in the survey items. Any non-relevant image were deleted.
 
+
 ```{r}
 # get list of participants we chose for inclusion
 selected_participants <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1uEbxH83Ww-AJtZl4M_XJubbqg9P_nRyhlVOwf5bcJOQ/edit#gid=1191274417") %>%
@@ -333,6 +334,10 @@ Survey items consisted of first, middle, and final contributions of #TidyTuesday
 # Survey Validation
 
 ## Content Validity
+
+To test the validity of our survey, we conducted a content validity study (Rubio et al, 2003). We asked a group of 7 judges to rate the clarity and potential reliability of each survey construct as it was portrayed on the survey (see Appendix X). We also asked judges to give a holistic rating on the survey's ability to measure data visualization development. In addition, we collected open-ended feedback for each construct rating as well as the holistic rating. We then computed a content validity index (CVI) for each item, ranging from 0 to 1. The item CVI was calculated as the total number of raters who rated each item in its highest and second highest category (e.g. "very clear" and "needs minor revisions to be clear") divided by the total number of raters. Th
+
+Only two of the seven items were rated less than 1. The reliability of the informativity construct was rated as .66, indicating major revisions were needed. The holistic rating of the survey was .83. Both construct definitions and rating scale category names were revised based on feedback.
 
 ## Convergent/Divergent Validity
 
