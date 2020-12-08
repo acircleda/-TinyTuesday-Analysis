@@ -327,9 +327,12 @@ ggplot(df_peng_iqr, aes(bill_ratio, species_num - .2)) +
 
 ## Survey Items
 
+
 Survey items consisted of first, middle, and final contributions of #TidyTuesday participants who agreed for us to use their graphics. Any graphics that were not relevant to #TidyTuesday were removed. In addition, when more than one graphic existed for any of the three time points, graphics were chosen based on those that required the least context to understand (e.g. did not use advanced statistical techniques such as odd ratios or sentiment analysis, did not contain undefined acronyms, etc.)
 
 ## Survey Questions
+
+A number of assessments have been used to understand learners’ data visualization interpretation abilities (e.g. ,McKenzie & Padilla, 1986; Boote, 2014; Lai et al., 2016). Here, our focus differs, in that we sought to measure not interpreters' ability, but, rather, data visualizations themselves. Accordingly, we focused on literature on the quality of visualizations and infographics, research more in the realm of Human-Computer Interaction (HCI) literature than in STEM education.
 
 There are three main survey questions per image. Each question is meant to measure a different data visualizationn construct. Initial considerations for constructs came from Berland et al.'s (2015) epistemologies in practice framework, which was designed to serve as a measure of students' thinking about the nature of knowledge-related ideas that guided their science inquiry. This framework included dimensions for attention to audience, the inclusion of evidence, and the extent to which the model communicated how and why something in the world worked.
 
