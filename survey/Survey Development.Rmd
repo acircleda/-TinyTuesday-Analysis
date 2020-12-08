@@ -331,18 +331,18 @@ Survey items consisted of first, middle, and final contributions of #TidyTuesday
 
 ## Survey Questions
 
-There are three main survey questions per image. Each question is meant measure a different data visualizationn construct. Initial considerations for constructs came from Berland et al.'s (2015) epistemic considerations ... JOSH ...
+There are three main survey questions per image. Each question is meant to measure a different data visualizationn construct. Initial considerations for constructs came from Berland et al.'s (2015) epistemologies in practice framework, which was designed to serve as a measure of students' thinking about the nature of knowledge-related ideas that guided their science inquiry.
 
-Further refinement of the constructs was also based on prior research into design and utilitiy preferences of data visualization consumers. For example, Quispel and Maes (2014) had graphic design students rate visualizations on attractiveness, information retrieval, clarity, and an overall rating in addition to a selection task where participants selected three visualizations they most appreciated and then explained their selections. Quispel et al. (2016) surveyed design experts and "laymen" (non-design experts) on attractiveness, familiarity, and perceived ease of use. Locoro et al. (2017) include a higher number of measures in their survey of the perceptions and interaction with infographics. They measured sinteticity (informational quality), clarity, informativity, intuitivity, elegance, attractiveness, usability, and ease of use.
+Further refinement of the constructs was also based on prior research. For example, Quispel and Maes (2014) had graphic design students rate visualizations on attractiveness, information retrieval, clarity, and an overall rating in addition to a selection task where participants selected three visualizations they most appreciated and then explained their selections. Quispel et al. (2016) surveyed design experts and "laymen" (non-design experts) on attractiveness, familiarity, and perceived ease of use. Locoro et al. (2017) include a higher number of measures in their survey of the perceptions and interaction with infographics. They measured sinteticity (informational quality), clarity, informativity, intuitivity, elegance, attractiveness, usability, and ease of use.
 
-In developing the survey questions, we considered the overlapping constructs of these examples from prior visualization work and how they were related to the epistemic framework above. In addition, we also considered the need to create succinct survey questions in order to reduce survey fatigue and minimize unplanned missing data. 
+In developing the survey questions, we considered the overlapping constructs of these examples from prior visualization work and how they were related to the epistemologies in practice framework above. In addition, we also considered the need to create succinct survey questions in order to reduce survey fatigue and minimize unplanned missing data. 
 
 Thus, we developed he following three survey constructs, each of which is rated on a 5-point scale from very poor (1) to very good (5):
 
   - Informativity - This element focuses on how well the graphic describes or explains something that is happening or has happened.
   - Clarity - This element focuses on how easy it is to read, understand, and interpret the visualization.
  - Attractiveness - This element focuses on how appealing and engaging the graphic is in terms of its overall use of shapes, color, theme, and layout.
-
+ 
 # Survey Validation
 
 ## Content Validity
@@ -360,3 +360,12 @@ Only two of the seven items were rated less than 1. The reliability of the infor
 ### Factor Analysis
 
 ### D Study
+
+# References
+
+Berland, L. K., Schwarz, C. V., Krist, C., Kenyon, L., Lo, A. S., & Reiser, B. J. (2016). Epistemologies in practice: Making scientific practices meaningful for students. Journal of Research in Science Teaching, 53(7), 1082-1112.
+Lai, K., Cabrera, J., Vitale, J. M., Madhok, J., Tinker, R., & Linn, M. C. (2016). Measuring graph comprehension, critique, and construction in science. Journal of Science Education and Technology, 25(4), 665-681.
+Locoro, A., Cabitza, F., Actis-Grosso, R., & Batini, C. (2017). Static and interactive infographics in daily tasks: A value-in-use and quality of interaction user study. Computers in Human Behavior, 71, 240-257.
+Quispel, A., & Maes, A. (2014). Would you prefer pie or cupcakes? Preferences for data visualization designs of professionals and laypeople in graphic design. Journal of Visual Languages & Computing, 25(2), 107-116.
+
+
